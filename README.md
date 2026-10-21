@@ -26,7 +26,7 @@ pnpm dev
 # 服务启动后，在另一个根目录终端运行 pnpm open，建立本机访问授权。
 ```
 
-打开终端显示的 [本地入口](http://127.0.0.1:3000)。首次安装需要联网下载依赖；运行核心流程不需要联网。better-sqlite3 13 已携带 Windows x64 N-API 预编译包，本机实测 SQLite 3.53.4；workspace 配置不执行多余的原生重编译。
+服务就绪后，在另一个项目根目录终端运行 `pnpm open`，由 Windows 默认浏览器打开一次性授权入口。手动输入 `http://127.0.0.1:3000` 只打开页面，不能建立授权。已有页面收到新授权后会自动重载干净地址并恢复；授权过期或已使用时重新运行命令。若未出现浏览器，请检查 Windows 设置中的默认浏览器及 HTTP 关联；命令失败会返回非零退出码和操作提示。首次安装需要联网下载依赖；运行核心流程不需要联网。better-sqlite3 13 已携带 Windows x64 N-API 预编译包，本机实测 SQLite 3.53.4；workspace 配置不执行多余的原生重编译。
 
 环境文件可选。应用与数据库脚本均使用默认 `data/app.db`。更改数据库时，请在 PowerShell 会话设置 `$env:DATABASE_URL='data/other.db'`，确保迁移、seed 与服务使用同一值。Next 自动加载 `.env.local`，维护脚本也加载 `.env.local`，已设置的进程环境优先。API Key 示例为空。现已支持 DeepSeek / OpenAI 模型选择与独立检索；需本机配置并在界面明确启用，详见 [AI 接入说明](docs/ai-setup.md)。学习方向检索默认优先 Bilibili、小红书、百度贴吧、抖音的公开内容，可切换官方与参考来源，规则与限制见 [检索说明](docs/retrieval.md)。
 

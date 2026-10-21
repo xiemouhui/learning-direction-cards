@@ -6,7 +6,7 @@ import { build } from 'esbuild';
 
 if (process.platform !== 'win32' || process.arch !== 'x64') throw new Error('当前发布器只支持 Windows x64。');
 const project = process.cwd();
-const version = '0.1.0-preview.2';
+const version = '0.1.0-preview.3';
 const name = `learning-direction-cards-${version}-windows-x64`;
 const destination = resolve('dist', name);
 const vendor = resolve('.local/vendor/node-v24.19.0-win-x64');

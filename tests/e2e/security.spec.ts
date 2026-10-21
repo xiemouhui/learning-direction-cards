@@ -30,6 +30,10 @@ test('启动器的一次性片段授权可建立会话，地址立即清除且�
   await expect(page).toHaveURL('http://127.0.0.1:3001/');
   const replay = await page.request.post('/api/local-session', { headers: { 'x-app-request': '1' }, data: { token } });
   expect(replay.status()).toBe(401);
+  await page.getByRole('link', { name: '设置与隐私', exact: true }).click();
+  await expect(page).toHaveURL('http://127.0.0.1:3001/settings');
+  await page.getByRole('link', { name: '探索方向', exact: true }).click();
+  await expect(page).toHaveURL('http://127.0.0.1:3001/');
 });
 
 test('跨站、伪造 Host 与其他 localhost 端口不能访问 API', async ({ page }) => {
@@ -40,6 +44,21 @@ test('跨站、伪造 Host 与其他 localhost 端口不能访问 API', async ({
   const tampered = await page.context().cookies();
   await page.context().addCookies(tampered.map(c => c.name === 'direction_local_access' ? { ...c, value: 'forged' } : c));
   expect((await page.request.get('/api/app')).status()).toBe(401);
+});
+
+test('已有未授权页面在片段变更后恢复，过期失败不会阻止下一次新授权', async ({ page }) => {
+  await page.context().clearCookies({ name: 'direction_local_access' });
+  await page.goto('/settings');
+  await expect(page.getByText(/本地访问尚未授权/)).toBeVisible();
+  await page.evaluate(() => { window.location.hash = 'local-access=expired'; });
+  await expect(page.getByText(/本机授权已过期或已使用/)).toBeVisible();
+  await expect(page).toHaveURL('http://127.0.0.1:3001/settings');
+  const token = createBootstrapToken(resolve(process.env.LDC_TEST_SECURITY_DIR ?? '.local/e2e-security'));
+  await page.evaluate(value => { window.location.hash = `local-access=${value}`; }, token);
+  await expect.poll(async () => (await page.request.get('/api/app')).status()).toBe(200);
+  await expect(page.getByText(/本机授权已过期或已使用/)).toHaveCount(0);
+  await expect(page).toHaveURL('http://127.0.0.1:3001/settings');
+  await expect(page.getByRole('heading', { name: '设置与隐私', exact: true })).toBeVisible();
 });
 
 test('误粘贴 Key 的请求不会保存到对话、导出或返回原文', async ({ page }) => {

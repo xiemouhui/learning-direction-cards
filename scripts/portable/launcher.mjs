@@ -8,6 +8,7 @@ import { spawn, spawnSync } from 'node:child_process';
 import { parseEnv } from 'node:util';
 import { credentialOperation, keyNames, readCredentialStore, writeCredentialStore, privateDirectory } from './security/credentials.mjs';
 import { createBootstrapToken } from './security/local-session.mjs';
+import { launchBrowser } from './security/browser.mjs';
 
 const root = dirname(fileURLToPath(import.meta.url));
 const args = process.argv.slice(2), action = args[0] ?? 'start';
@@ -28,7 +29,7 @@ if (!existsSync(configFile)) copyFileSync(join(root, 'config.example.env'), conf
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 function readState() { try { return JSON.parse(readFileSync(stateFile, 'utf8')); } catch { return null; } }
 function runUi(command, values) { if (!noUi) spawn(command, values, { detached: true, stdio: 'ignore', windowsHide: true }).unref(); }
-function openBrowser(url) { if (!noUi) runUi('explorer.exe', [`${url}/#local-access=${createBootstrapToken(join(dataDir, 'security'))}`]); }
+async function openBrowser(url) { if (!noUi) await launchBrowser(`${url}/#local-access=${createBootstrapToken(join(dataDir, 'security'))}`); }
 async function request(command, details = {}) {
   const state = readState();
   if (!state?.token) return null;
@@ -107,7 +108,7 @@ async function serve() {
         } catch { socket.end(JSON.stringify({ updated: false }) + '\n'); }
         return;
       }
-      socket.end(JSON.stringify({ ready, origin, version: '0.1.0-preview.2', stopping: command.command === 'stop' }) + '\n');
+      socket.end(JSON.stringify({ ready, origin, version: '0.1.0-preview.3', stopping: command.command === 'stop' }) + '\n');
       if (command.command === 'stop' && !shuttingDown) { shuttingDown = true; control.close(); setTimeout(() => { if (readState()?.token === token) { try { unlinkSync(stateFile); } catch {} } if (process.listenerCount('SIGTERM')) process.emit('SIGTERM'); else process.exit(0); setTimeout(() => process.exit(0), 10000).unref(); }, 100); }
     });
   });
@@ -142,7 +143,7 @@ async function main() {
   if (action === 'serve') return serve();
   if (action === 'config') {
     const current = await request('status');
-    if (!current?.ready || current.version !== '0.1.0-preview.2') throw new Error('START_FIRST');
+    if (!current?.ready || current.version !== '0.1.0-preview.3') throw new Error('START_FIRST');
     const result = noUi ? readFileSync(0, 'utf8') : credentialOperation('Prompt');
     if (!result) return;
     const details = JSON.parse(result);
@@ -156,7 +157,7 @@ async function main() {
   if (action === 'stop') { const status = await request('stop'); if (!status) { console.log('没有正在运行的免安装版服务。'); return; } for (let i = 0; i < 80 && await request('status'); i++) await sleep(250); if (await request('status')) throw new Error('STOP_FAILED'); console.log('免安装版服务已停止；资料保留。'); return; }
   if (action !== 'start') throw new Error('UNKNOWN_ACTION');
   const previous = await request('status');
-  if (previous?.ready) { openBrowser(previous.origin); console.log('已打开现有实例。'); return; }
+  if (previous?.ready) { await openBrowser(previous.origin); console.log('现有实例已就绪，已请求默认浏览器打开授权入口。'); return; }
   let childExited = false;
   if (!previous) {
     const log = openSync(join(dataDir, 'service.log'), 'a');
@@ -167,7 +168,7 @@ async function main() {
   }
   for (let i = 0; i < 160; i++) {
     const current = await request('status');
-    if (current?.ready) { openBrowser(current.origin); console.log('免安装版已启动。'); return; }
+    if (current?.ready) { await openBrowser(current.origin); console.log(noUi ? '免安装版已启动。' : '免安装版已启动，已请求默认浏览器打开授权入口。'); return; }
     if (childExited && !current) throw new Error('START_FAILED');
     await sleep(250);
   }
@@ -176,7 +177,7 @@ async function main() {
 main().catch(error => {
   if (action === 'serve' && error.code === 'EADDRINUSE') process.exit(0);
   if (action === 'serve') console.error('Startup failed:', /^[A-Z_]+$/.test(error.code ?? error.message) ? (error.code ?? error.message) : 'INTERNAL_ERROR');
-  const message = error.message === 'START_FIRST' ? '请先启动当前安全版本，再配置本机凭据。' : error.message === 'PORT_BUSY' ? '本地端口被占用，请先停止占用本端口的程序。' : '操作未完成。请检查数据目录中的 service.log；可尝试停止后重新启动。';
+  const message = error.message === 'BROWSER_FAILED' || error.message === 'BROWSER_UNSUPPORTED' ? '服务已就绪，但无法打开浏览器。请检查 Windows 默认浏览器的 HTTP 关联后重新双击启动入口；无需停止服务。手动输入普通网址不会获得授权。' : error.message === 'START_FIRST' ? '请先启动当前安全版本，再配置本机凭据。' : error.message === 'PORT_BUSY' ? '本地端口被占用，请先停止占用本端口的程序。' : '操作未完成。请检查数据目录中的 service.log；可尝试停止后重新启动。';
   writeFileSync(join(dataDir, 'last-error.txt'), `${new Date().toISOString()}\n${message}\n`, 'utf8');
   console.error(message);
   runUi('wscript.exe', [join(root, 'notice.vbs'), message]);

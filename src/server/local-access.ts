@@ -30,7 +30,11 @@ export function consumeBootstrap(value: unknown, now = Date.now()) {
   const reject = (code: string) => { if (process.env.LDC_AUTH_DIAGNOSTICS === '1') console.warn('Local authorization:', code); return false; };
   if (typeof value !== 'string' || !/^[a-f0-9]{48}\.\d{13}\.[a-f0-9]{64}$/.test(value)) return reject('FORMAT');
   const [nonce, expires, signature] = value.split('.');
-  if (Number(expires) <= now || Number(expires) > now + 60000) return reject('EXPIRY');
+  if (Number(expires) <= now) return reject('EXPIRED');
+  if (Number(expires) > now + 60000) {
+    if (process.env.LDC_AUTH_DIAGNOSTICS === '1') console.warn('Local authorization clock lead (ms):', Number(expires) - now - 60000);
+    return reject('EXPIRY_AHEAD');
+  }
   const expected = createHmac('sha256', signingKey()).update(`bootstrap:${nonce}.${expires}`).digest();
   if (!timingSafeEqual(expected, Buffer.from(signature, 'hex'))) return reject('SIGNATURE');
   const file = resolve(process.env.LDC_SECURITY_DIR ?? '.local/security', 'bootstrap', nonce);

@@ -7,7 +7,7 @@ import { execFileSync, spawn } from 'node:child_process';
 import { createHash, randomUUID } from 'node:crypto';
 import net from 'node:net';
 
-const name = 'learning-direction-cards-0.1.0-preview.2-windows-x64';
+const name = 'learning-direction-cards-0.1.0-preview.3-windows-x64';
 const zip = resolve('dist', `${name}.zip`);
 const sha = createHash('sha256').update(readFileSync(zip)).digest('hex');
 assert.equal(sha, readFileSync(`${zip}.sha256`, 'utf8').split(' ')[0]);
