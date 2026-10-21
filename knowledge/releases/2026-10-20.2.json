@@ -1,0 +1,5816 @@
+{
+  "id": "2026-10-20.2",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-20",
+  "nodes": [
+    {
+      "id": "cs",
+      "type": "major",
+      "name": "计算机科学与技术",
+      "summary": "从算法到系统，理解计算如何发生。",
+      "aliases": [],
+      "content": {
+        "abilities": [
+          "算法推理",
+          "系统抽象",
+          "程序设计"
+        ],
+        "courses": [
+          "数据结构：组织数据",
+          "算法：分析问题",
+          "操作系统：管理资源",
+          "计算机网络：连接系统",
+          "数据库：持久化数据"
+        ],
+        "intensity": [
+          "较高",
+          "较高",
+          "较高"
+        ],
+        "domains": [
+          "ai-ml",
+          "systems",
+          "theory-algorithms",
+          "cloud-distributed"
+        ],
+        "outlets": "软件研发、系统与算法相关探索",
+        "cost": "广度大，需要通过具体问题逐步聚焦",
+        "misconceptions": [
+          "专业名称不等于固定职业",
+          "修过课程不等于能够独立应用",
+          "基础薄弱不代表长期不适合"
+        ],
+        "path": [
+          "理解课程和问题范围",
+          "选择一个领域的具体入口",
+          "通过小项目验证并修正方向"
+        ]
+      },
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "net",
+      "type": "major",
+      "name": "网络工程",
+      "summary": "研究系统之间如何连接、传输与可靠协作。",
+      "aliases": [],
+      "content": {
+        "abilities": [
+          "协议理解",
+          "网络排障",
+          "网络设计"
+        ],
+        "courses": [
+          "计算机网络：理解协议",
+          "路由交换：组织连通",
+          "操作系统：理解主机",
+          "程序设计：实现工具",
+          "网络安全：识别风险"
+        ],
+        "intensity": [
+          "中等",
+          "较高",
+          "较高"
+        ],
+        "domains": [
+          "networks",
+          "cloud-distributed",
+          "security-crypto",
+          "embedded-iot"
+        ],
+        "outlets": "网络系统、基础设施与协议相关探索",
+        "cost": "需要耐心排查跨层问题",
+        "misconceptions": [
+          "专业名称不等于固定职业",
+          "修过课程不等于能够独立应用",
+          "基础薄弱不代表长期不适合"
+        ],
+        "path": [
+          "理解课程和问题范围",
+          "选择一个领域的具体入口",
+          "通过小项目验证并修正方向"
+        ]
+      },
+      "sourceClaimIds": [
+        "claim-bupt"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "sec",
+      "type": "major",
+      "name": "网络空间安全",
+      "summary": "理解可信边界，分析系统与信息的风险。",
+      "aliases": [],
+      "content": {
+        "abilities": [
+          "威胁分析",
+          "安全验证",
+          "协议理解"
+        ],
+        "courses": [
+          "密码学：理解安全机制",
+          "计算机网络：理解通信",
+          "操作系统：理解边界",
+          "程序设计：分析实现",
+          "离散数学：支撑论证"
+        ],
+        "intensity": [
+          "较高",
+          "较高",
+          "较高"
+        ],
+        "domains": [
+          "security-crypto",
+          "systems",
+          "networks"
+        ],
+        "outlets": "安全工程、密码与系统安全相关探索",
+        "cost": "需要授权意识、严谨验证和持续补基础",
+        "misconceptions": [
+          "专业名称不等于固定职业",
+          "修过课程不等于能够独立应用",
+          "基础薄弱不代表长期不适合"
+        ],
+        "path": [
+          "理解课程和问题范围",
+          "选择一个领域的具体入口",
+          "通过小项目验证并修正方向"
+        ]
+      },
+      "sourceClaimIds": [
+        "claim-jnu"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "data",
+      "type": "major",
+      "name": "数据科学与大数据技术",
+      "summary": "把数据变成可以检验的问题与结论。",
+      "aliases": [
+        "大数据"
+      ],
+      "content": {
+        "abilities": [
+          "数据建模",
+          "统计分析",
+          "数据处理"
+        ],
+        "courses": [
+          "概率统计：表达不确定性",
+          "线性代数：表达数据",
+          "数据库：组织数据",
+          "机器学习：建模预测",
+          "程序设计：实现分析"
+        ],
+        "intensity": [
+          "较高",
+          "较高",
+          "较高"
+        ],
+        "domains": [
+          "ai-ml",
+          "data-science-systems",
+          "cloud-distributed"
+        ],
+        "outlets": "数据分析、数据工程与建模相关探索",
+        "cost": "数据质量与假设检验往往比调用工具更费精力",
+        "misconceptions": [
+          "专业名称不等于固定职业",
+          "修过课程不等于能够独立应用",
+          "基础薄弱不代表长期不适合"
+        ],
+        "path": [
+          "理解课程和问题范围",
+          "选择一个领域的具体入口",
+          "通过小项目验证并修正方向"
+        ]
+      },
+      "sourceClaimIds": [
+        "claim-data-major"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "se",
+      "type": "major",
+      "name": "软件工程",
+      "summary": "让软件在真实约束下可靠地演进。",
+      "aliases": [],
+      "content": {
+        "abilities": [
+          "需求分析",
+          "协作设计",
+          "质量保障"
+        ],
+        "courses": [
+          "软件需求：澄清问题",
+          "软件设计：组织边界",
+          "软件测试：收集质量证据",
+          "数据库：管理数据",
+          "项目实践：理解协作"
+        ],
+        "intensity": [
+          "中等",
+          "较高",
+          "较高"
+        ],
+        "domains": [
+          "software-systems",
+          "cloud-distributed",
+          "hci-media",
+          "ai-ml"
+        ],
+        "outlets": "软件开发、质量与工程方法相关探索",
+        "cost": "沟通、维护与权衡贯穿整个过程",
+        "misconceptions": [
+          "专业名称不等于固定职业",
+          "修过课程不等于能够独立应用",
+          "基础薄弱不代表长期不适合"
+        ],
+        "path": [
+          "理解课程和问题范围",
+          "选择一个领域的具体入口",
+          "通过小项目验证并修正方向"
+        ]
+      },
+      "sourceClaimIds": [
+        "claim-bupt"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "ai-ml",
+      "type": "domain",
+      "name": "人工智能与机器学习",
+      "summary": "从数据与模型中寻找可检验的规律。",
+      "aliases": [],
+      "content": {
+        "coverage": "complete",
+        "tags": [
+          "智能模型",
+          "数据分析"
+        ],
+        "preferences": [
+          "engineering",
+          "research"
+        ]
+      },
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "systems",
+      "type": "domain",
+      "name": "计算机系统与底层技术",
+      "summary": "理解程序、操作系统与硬件如何共同工作。",
+      "aliases": [],
+      "content": {
+        "coverage": "complete",
+        "tags": [
+          "系统性能"
+        ],
+        "preferences": [
+          "engineering",
+          "research"
+        ]
+      },
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "cloud-distributed",
+      "type": "domain",
+      "name": "云计算与分布式系统",
+      "summary": "面对多节点、故障与资源管理的工程问题。",
+      "aliases": [],
+      "content": {
+        "coverage": "complete",
+        "tags": [
+          "工程协作",
+          "网络排障"
+        ],
+        "preferences": [
+          "engineering",
+          "research"
+        ]
+      },
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "embedded-iot",
+      "type": "domain",
+      "name": "嵌入式系统与物联网",
+      "summary": "把计算连接到设备与现实信号。",
+      "aliases": [],
+      "content": {
+        "coverage": "complete",
+        "tags": [
+          "软硬结合"
+        ],
+        "preferences": [
+          "engineering",
+          "research"
+        ]
+      },
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "robotics",
+      "type": "domain",
+      "name": "机器人与智能系统",
+      "summary": "尚未扩充",
+      "aliases": [],
+      "content": {
+        "coverage": "planned",
+        "tags": [
+          "软硬结合"
+        ],
+        "preferences": [
+          "engineering",
+          "research"
+        ]
+      },
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "graphics-visual",
+      "type": "domain",
+      "name": "计算机图形学与视觉计算",
+      "summary": "尚未扩充",
+      "aliases": [],
+      "content": {
+        "coverage": "planned",
+        "tags": [],
+        "preferences": [
+          "engineering",
+          "research"
+        ]
+      },
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "hci-media",
+      "type": "domain",
+      "name": "人机交互与数字媒体技术",
+      "summary": "尚未扩充",
+      "aliases": [],
+      "content": {
+        "coverage": "planned",
+        "tags": [],
+        "preferences": [
+          "engineering",
+          "research"
+        ]
+      },
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "theory-algorithms",
+      "type": "domain",
+      "name": "计算理论与算法",
+      "summary": "尚未扩充",
+      "aliases": [],
+      "content": {
+        "coverage": "planned",
+        "tags": [],
+        "preferences": [
+          "engineering",
+          "research"
+        ]
+      },
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "networks",
+      "type": "domain",
+      "name": "计算机网络与通信",
+      "summary": "尚未扩充",
+      "aliases": [],
+      "content": {
+        "coverage": "planned",
+        "tags": [],
+        "preferences": [
+          "engineering",
+          "research"
+        ]
+      },
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "security-crypto",
+      "type": "domain",
+      "name": "网络安全与密码学",
+      "summary": "本版仅覆盖密码学探索与密码工程入口。",
+      "aliases": [],
+      "content": {
+        "coverage": "partial",
+        "tags": [
+          "安全攻防",
+          "理论算法"
+        ],
+        "preferences": [
+          "engineering",
+          "research"
+        ]
+      },
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "software-systems",
+      "type": "domain",
+      "name": "软件工程与软件系统",
+      "summary": "尚未扩充",
+      "aliases": [],
+      "content": {
+        "coverage": "planned",
+        "tags": [],
+        "preferences": [
+          "engineering",
+          "research"
+        ]
+      },
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "data-science-systems",
+      "type": "domain",
+      "name": "数据系统与数据科学",
+      "summary": "尚未扩充",
+      "aliases": [],
+      "content": {
+        "coverage": "planned",
+        "tags": [],
+        "preferences": [
+          "engineering",
+          "research"
+        ]
+      },
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "programming",
+      "type": "knowledge",
+      "name": "程序设计与测试",
+      "summary": "能够解释控制流程、处理输入输出并记录检查结果。",
+      "aliases": [],
+      "content": {
+        "diagnostic": "用一个小例子解释「程序设计与测试」，记录能独立完成与仍需帮助的部分。"
+      },
+      "sourceClaimIds": [
+        "claim-shell"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "c",
+      "type": "knowledge",
+      "name": "C / C++ 基础",
+      "summary": "能阅读和修改简单程序，区分语言基础与设备经验。",
+      "aliases": [],
+      "content": {
+        "diagnostic": "用一个小例子解释「C / C++ 基础」，记录能独立完成与仍需帮助的部分。"
+      },
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "python",
+      "type": "knowledge",
+      "name": "Python 基础",
+      "summary": "能解释函数、容器和简单数据操作。",
+      "aliases": [],
+      "content": {
+        "diagnostic": "用一个小例子解释「Python 基础」，记录能独立完成与仍需帮助的部分。"
+      },
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "linear",
+      "type": "knowledge",
+      "name": "线性代数基础",
+      "summary": "理解向量、矩阵与线性运算。",
+      "aliases": [],
+      "content": {
+        "diagnostic": "用一个小例子解释「线性代数基础」，记录能独立完成与仍需帮助的部分。"
+      },
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "probability",
+      "type": "knowledge",
+      "name": "概率与统计基础",
+      "summary": "理解随机性、条件概率与统计摘要。",
+      "aliases": [],
+      "content": {
+        "diagnostic": "用一个小例子解释「概率与统计基础」，记录能独立完成与仍需帮助的部分。"
+      },
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "discrete",
+      "type": "knowledge",
+      "name": "离散数学基础",
+      "summary": "理解集合、逻辑与离散结构；不等同完整数论。",
+      "aliases": [],
+      "content": {
+        "diagnostic": "用一个小例子解释「离散数学基础」，记录能独立完成与仍需帮助的部分。"
+      },
+      "sourceClaimIds": [
+        "claim-crypto"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "proof",
+      "type": "knowledge",
+      "name": "数学证明基础",
+      "summary": "能够检查论证的假设与推理步骤。",
+      "aliases": [],
+      "content": {
+        "diagnostic": "用一个小例子解释「数学证明基础」，记录能独立完成与仍需帮助的部分。"
+      },
+      "sourceClaimIds": [
+        "claim-crypto"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "number-theory",
+      "type": "knowledge",
+      "name": "数论基础",
+      "summary": "理解模运算等代数背景。",
+      "aliases": [],
+      "content": {
+        "diagnostic": "用一个小例子解释「数论基础」，记录能独立完成与仍需帮助的部分。"
+      },
+      "sourceClaimIds": [
+        "claim-crypto"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "network",
+      "type": "knowledge",
+      "name": "计算机网络基础",
+      "summary": "解释主机间通信与协议分层。",
+      "aliases": [],
+      "content": {
+        "diagnostic": "用一个小例子解释「计算机网络基础」，记录能独立完成与仍需帮助的部分。"
+      },
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "linux",
+      "type": "knowledge",
+      "name": "Linux 与命令行",
+      "summary": "能使用命令行检查文件、进程和环境。",
+      "aliases": [],
+      "content": {
+        "diagnostic": "用一个小例子解释「Linux 与命令行」，记录能独立完成与仍需帮助的部分。"
+      },
+      "sourceClaimIds": [
+        "claim-shell"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "measurement",
+      "type": "skill",
+      "name": "系统测量与实验记录",
+      "summary": "区分指标、假设、实验与结论。",
+      "aliases": [],
+      "content": {
+        "diagnostic": "用一个小例子解释「系统测量与实验记录」，记录能独立完成与仍需帮助的部分。"
+      },
+      "sourceClaimIds": [
+        "claim-perf"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "containers",
+      "type": "knowledge",
+      "name": "容器与应用部署",
+      "summary": "理解应用实例、镜像与部署状态。",
+      "aliases": [],
+      "content": {
+        "diagnostic": "用一个小例子解释「容器与应用部署」，记录能独立完成与仍需帮助的部分。"
+      },
+      "sourceClaimIds": [
+        "claim-k8s"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "distributed",
+      "type": "knowledge",
+      "name": "复制与故障模型",
+      "summary": "理解多节点状态与故障假设。",
+      "aliases": [],
+      "content": {
+        "diagnostic": "用一个小例子解释「复制与故障模型」，记录能独立完成与仍需帮助的部分。"
+      },
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "electronics",
+      "type": "knowledge",
+      "name": "设备与电路基本安全",
+      "summary": "核对板卡、供电、接口与连接说明。",
+      "aliases": [],
+      "content": {
+        "diagnostic": "用一个小例子解释「设备与电路基本安全」，记录能独立完成与仍需帮助的部分。"
+      },
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "toolchain",
+      "type": "skill",
+      "name": "嵌入式工具链",
+      "summary": "区分编译、烧录与监视。",
+      "aliases": [],
+      "content": {
+        "diagnostic": "用一个小例子解释「嵌入式工具链」，记录能独立完成与仍需帮助的部分。"
+      },
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "aead",
+      "type": "knowledge",
+      "name": "认证加密与安全使用",
+      "summary": "理解机密性、完整性、nonce 与验证失败。",
+      "aliases": [],
+      "content": {
+        "diagnostic": "用一个小例子解释「认证加密与安全使用」，记录能独立完成与仍需帮助的部分。"
+      },
+      "sourceClaimIds": [
+        "claim-aead"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "model-eval",
+      "type": "knowledge",
+      "name": "模型评估基础",
+      "summary": "区分训练数据与测试证据，记录误差和局限。",
+      "aliases": [],
+      "content": {
+        "diagnostic": "用一个小例子解释「模型评估基础」，记录能独立完成与仍需帮助的部分。"
+      },
+      "sourceClaimIds": [
+        "claim-torch"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "ml-foundations",
+      "type": "subdomain",
+      "name": "机器学习基础探索",
+      "summary": "比较简单模型与基线，检查数据和误差。",
+      "aliases": [],
+      "content": {
+        "domain": "ai-ml",
+        "resource": "电脑",
+        "cost": "需要阅读文档、记录失败与复测；任务规模由首次尝试校准。",
+        "methods": [
+          "阅读来源并提出可检验的问题",
+          "控制输入并记录观察",
+          "解释假设、反例与局限"
+        ],
+        "explore": "比较简单模型与基线，检查数据和误差。",
+        "deep": "在已验证基础上，进一步解释「机器学习基础探索」的机制与复杂情形。",
+        "limitations": "项目只提供局部证据，不能证明就业或科研准备充分。"
+      },
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "project-ml-foundations",
+      "type": "project",
+      "name": "小型数据集基线比较",
+      "summary": "比较简单模型与基线，检查数据和误差。",
+      "aliases": [],
+      "content": {
+        "input": "核对本专题已列明的起步要求和电脑资源。",
+        "output": "一份数据划分、基线和误差解释报告",
+        "rubric": [
+          "明确输入、环境与假设",
+          "保存可重复检查的产出",
+          "解释至少一个失败或反例",
+          "说明独立完成范围与未验证部分"
+        ],
+        "limits": "不能证明全部理论掌握、生产安全、职业胜任或研究创新。",
+        "resource": "电脑"
+      },
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "ai-apps",
+      "type": "subdomain",
+      "name": "AI 应用与模型使用探索",
+      "summary": "理解现成模型的输入、输出和使用边界。",
+      "aliases": [],
+      "content": {
+        "domain": "ai-ml",
+        "resource": "电脑",
+        "cost": "需要阅读文档、记录失败与复测；任务规模由首次尝试校准。",
+        "methods": [
+          "阅读来源并提出可检验的问题",
+          "控制输入并记录观察",
+          "解释假设、反例与局限"
+        ],
+        "explore": "理解现成模型的输入、输出和使用边界。",
+        "deep": "在已验证基础上，进一步解释「AI 应用与模型使用探索」的机制与复杂情形。",
+        "limitations": "项目只提供局部证据，不能证明就业或科研准备充分。"
+      },
+      "sourceClaimIds": [
+        "claim-torch"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "project-ai-apps",
+      "type": "project",
+      "name": "现成模型误差观察",
+      "summary": "理解现成模型的输入、输出和使用边界。",
+      "aliases": [],
+      "content": {
+        "input": "核对本专题已列明的起步要求和电脑资源。",
+        "output": "固定样例的输出、失败情形和使用边界说明",
+        "rubric": [
+          "明确输入、环境与假设",
+          "保存可重复检查的产出",
+          "解释至少一个失败或反例",
+          "说明独立完成范围与未验证部分"
+        ],
+        "limits": "不能证明全部理论掌握、生产安全、职业胜任或研究创新。",
+        "resource": "电脑"
+      },
+      "sourceClaimIds": [
+        "claim-torch"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "linux-basics",
+      "type": "subdomain",
+      "name": "操作系统与 Linux 基础探索",
+      "summary": "解释进程、文件与命令行环境。",
+      "aliases": [],
+      "content": {
+        "domain": "systems",
+        "resource": "电脑",
+        "cost": "需要阅读文档、记录失败与复测；任务规模由首次尝试校准。",
+        "methods": [
+          "阅读来源并提出可检验的问题",
+          "控制输入并记录观察",
+          "解释假设、反例与局限"
+        ],
+        "explore": "解释进程、文件与命令行环境。",
+        "deep": "在已验证基础上，进一步解释「操作系统与 Linux 基础探索」的机制与复杂情形。",
+        "limitations": "项目只提供局部证据，不能证明就业或科研准备充分。"
+      },
+      "sourceClaimIds": [
+        "claim-shell"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "project-linux-basics",
+      "type": "project",
+      "name": "命令行环境观察",
+      "summary": "解释进程、文件与命令行环境。",
+      "aliases": [],
+      "content": {
+        "input": "核对本专题已列明的起步要求和电脑资源。",
+        "output": "命令记录、进程与文件关系说明",
+        "rubric": [
+          "明确输入、环境与假设",
+          "保存可重复检查的产出",
+          "解释至少一个失败或反例",
+          "说明独立完成范围与未验证部分"
+        ],
+        "limits": "不能证明全部理论掌握、生产安全、职业胜任或研究创新。",
+        "resource": "电脑"
+      },
+      "sourceClaimIds": [
+        "claim-shell"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "systems-performance",
+      "type": "subdomain",
+      "name": "系统性能分析",
+      "summary": "用测量检验一个性能瓶颈假设。",
+      "aliases": [],
+      "content": {
+        "domain": "systems",
+        "resource": "电脑",
+        "cost": "需要阅读文档、记录失败与复测；任务规模由首次尝试校准。",
+        "methods": [
+          "阅读来源并提出可检验的问题",
+          "控制输入并记录观察",
+          "解释假设、反例与局限"
+        ],
+        "explore": "用测量检验一个性能瓶颈假设。",
+        "deep": "在已验证基础上，进一步解释「系统性能分析」的机制与复杂情形。",
+        "limitations": "项目只提供局部证据，不能证明就业或科研准备充分。"
+      },
+      "sourceClaimIds": [
+        "claim-perf"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "project-systems-performance",
+      "type": "project",
+      "name": "本地进程指标观察",
+      "summary": "用测量检验一个性能瓶颈假设。",
+      "aliases": [],
+      "content": {
+        "input": "核对本专题已列明的起步要求和电脑资源。",
+        "output": "带假设与复测的测量报告",
+        "rubric": [
+          "明确输入、环境与假设",
+          "保存可重复检查的产出",
+          "解释至少一个失败或反例",
+          "说明独立完成范围与未验证部分"
+        ],
+        "limits": "不能证明全部理论掌握、生产安全、职业胜任或研究创新。",
+        "resource": "电脑"
+      },
+      "sourceClaimIds": [
+        "claim-perf"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "distributed-basics",
+      "type": "subdomain",
+      "name": "分布式系统基础",
+      "summary": "辨认复制、故障与一致性的取舍。",
+      "aliases": [],
+      "content": {
+        "domain": "cloud-distributed",
+        "resource": "电脑",
+        "cost": "需要阅读文档、记录失败与复测；任务规模由首次尝试校准。",
+        "methods": [
+          "阅读来源并提出可检验的问题",
+          "控制输入并记录观察",
+          "解释假设、反例与局限"
+        ],
+        "explore": "辨认复制、故障与一致性的取舍。",
+        "deep": "在已验证基础上，进一步解释「分布式系统基础」的机制与复杂情形。",
+        "limitations": "项目只提供局部证据，不能证明就业或科研准备充分。"
+      },
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "project-distributed-basics",
+      "type": "project",
+      "name": "复制状态与故障情景记录",
+      "summary": "辨认复制、故障与一致性的取舍。",
+      "aliases": [],
+      "content": {
+        "input": "核对本专题已列明的起步要求和电脑资源。",
+        "output": "不同故障假设下的状态变化及解释",
+        "rubric": [
+          "明确输入、环境与假设",
+          "保存可重复检查的产出",
+          "解释至少一个失败或反例",
+          "说明独立完成范围与未验证部分"
+        ],
+        "limits": "不能证明全部理论掌握、生产安全、职业胜任或研究创新。",
+        "resource": "电脑"
+      },
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "cloud-ops",
+      "type": "subdomain",
+      "name": "云服务部署与运维基础",
+      "summary": "在本地环境观察应用部署与更新。",
+      "aliases": [],
+      "content": {
+        "domain": "cloud-distributed",
+        "resource": "电脑",
+        "cost": "需要阅读文档、记录失败与复测；任务规模由首次尝试校准。",
+        "methods": [
+          "阅读来源并提出可检验的问题",
+          "控制输入并记录观察",
+          "解释假设、反例与局限"
+        ],
+        "explore": "在本地环境观察应用部署与更新。",
+        "deep": "在已验证基础上，进一步解释「云服务部署与运维基础」的机制与复杂情形。",
+        "limitations": "项目只提供局部证据，不能证明就业或科研准备充分。"
+      },
+      "sourceClaimIds": [
+        "claim-k8s"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "project-cloud-ops",
+      "type": "project",
+      "name": "本地应用生命周期观察",
+      "summary": "在本地环境观察应用部署与更新。",
+      "aliases": [],
+      "content": {
+        "input": "核对本专题已列明的起步要求和电脑资源。",
+        "output": "部署、扩缩和更新的状态记录；无需购买云服务",
+        "rubric": [
+          "明确输入、环境与假设",
+          "保存可重复检查的产出",
+          "解释至少一个失败或反例",
+          "说明独立完成范围与未验证部分"
+        ],
+        "limits": "不能证明全部理论掌握、生产安全、职业胜任或研究创新。",
+        "resource": "电脑"
+      },
+      "sourceClaimIds": [
+        "claim-k8s"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "embedded-basics",
+      "type": "subdomain",
+      "name": "嵌入式开发基础",
+      "summary": "核对工具链、板卡输入和运行现象。",
+      "aliases": [],
+      "content": {
+        "domain": "embedded-iot",
+        "resource": "开发板",
+        "cost": "需要兼容设备和实际连接条件，可先核对资源再决定。",
+        "methods": [
+          "阅读来源并提出可检验的问题",
+          "控制输入并记录观察",
+          "解释假设、反例与局限"
+        ],
+        "explore": "核对工具链、板卡输入和运行现象。",
+        "deep": "在已验证基础上，进一步解释「嵌入式开发基础」的机制与复杂情形。",
+        "limitations": "项目只提供局部证据，不能证明就业或科研准备充分。"
+      },
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "project-embedded-basics",
+      "type": "project",
+      "name": "开发板构建与监视记录",
+      "summary": "核对工具链、板卡输入和运行现象。",
+      "aliases": [],
+      "content": {
+        "input": "核对本专题已列明的起步要求和开发板资源。",
+        "output": "构建日志、设备输出和条件说明",
+        "rubric": [
+          "明确输入、环境与假设",
+          "保存可重复检查的产出",
+          "解释至少一个失败或反例",
+          "说明独立完成范围与未验证部分"
+        ],
+        "limits": "不能证明全部理论掌握、生产安全、职业胜任或研究创新。",
+        "resource": "开发板"
+      },
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "iot-basics",
+      "type": "subdomain",
+      "name": "物联网系统入门",
+      "summary": "区分设备、传输和接收端的职责。",
+      "aliases": [],
+      "content": {
+        "domain": "embedded-iot",
+        "resource": "开发板",
+        "cost": "需要兼容设备和实际连接条件，可先核对资源再决定。",
+        "methods": [
+          "阅读来源并提出可检验的问题",
+          "控制输入并记录观察",
+          "解释假设、反例与局限"
+        ],
+        "explore": "区分设备、传输和接收端的职责。",
+        "deep": "在已验证基础上，进一步解释「物联网系统入门」的机制与复杂情形。",
+        "limitations": "项目只提供局部证据，不能证明就业或科研准备充分。"
+      },
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "project-iot-basics",
+      "type": "project",
+      "name": "设备消息链路观察",
+      "summary": "区分设备、传输和接收端的职责。",
+      "aliases": [],
+      "content": {
+        "input": "核对本专题已列明的起步要求和开发板资源。",
+        "output": "设备输出与链路故障检查表",
+        "rubric": [
+          "明确输入、环境与假设",
+          "保存可重复检查的产出",
+          "解释至少一个失败或反例",
+          "说明独立完成范围与未验证部分"
+        ],
+        "limits": "不能证明全部理论掌握、生产安全、职业胜任或研究创新。",
+        "resource": "开发板"
+      },
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "modern-crypto",
+      "type": "subdomain",
+      "name": "现代密码学探索",
+      "summary": "区分加密、认证与攻击者模型。",
+      "aliases": [],
+      "content": {
+        "domain": "security-crypto",
+        "resource": "电脑",
+        "cost": "需要阅读文档、记录失败与复测；任务规模由首次尝试校准。",
+        "methods": [
+          "阅读来源并提出可检验的问题",
+          "控制输入并记录观察",
+          "解释假设、反例与局限"
+        ],
+        "explore": "区分加密、认证与攻击者模型。",
+        "deep": "在已验证基础上，进一步解释「现代密码学探索」的机制与复杂情形。",
+        "limitations": "项目只提供局部证据，不能证明就业或科研准备充分。"
+      },
+      "sourceClaimIds": [
+        "claim-crypto"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "project-modern-crypto",
+      "type": "project",
+      "name": "安全目标与反例辨识",
+      "summary": "区分加密、认证与攻击者模型。",
+      "aliases": [],
+      "content": {
+        "input": "核对本专题已列明的起步要求和电脑资源。",
+        "output": "两种安全目标、假设与反例的解释记录",
+        "rubric": [
+          "明确输入、环境与假设",
+          "保存可重复检查的产出",
+          "解释至少一个失败或反例",
+          "说明独立完成范围与未验证部分"
+        ],
+        "limits": "不能证明全部理论掌握、生产安全、职业胜任或研究创新。",
+        "resource": "电脑"
+      },
+      "sourceClaimIds": [
+        "claim-crypto"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "crypto-engineering",
+      "type": "subdomain",
+      "name": "密码工程应用入门",
+      "summary": "通过成熟库观察认证加密成功与失败。",
+      "aliases": [],
+      "content": {
+        "domain": "security-crypto",
+        "resource": "电脑",
+        "cost": "需要阅读文档、记录失败与复测；任务规模由首次尝试校准。",
+        "methods": [
+          "阅读来源并提出可检验的问题",
+          "控制输入并记录观察",
+          "解释假设、反例与局限"
+        ],
+        "explore": "通过成熟库观察认证加密成功与失败。",
+        "deep": "在已验证基础上，进一步解释「密码工程应用入门」的机制与复杂情形。",
+        "limitations": "项目只提供局部证据，不能证明就业或科研准备充分。"
+      },
+      "sourceClaimIds": [
+        "claim-aead"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    },
+    {
+      "id": "project-crypto-engineering",
+      "type": "project",
+      "name": "认证加密输入与篡改验证",
+      "summary": "通过成熟库观察认证加密成功与失败。",
+      "aliases": [],
+      "content": {
+        "input": "核对本专题已列明的起步要求和电脑资源。",
+        "output": "记录正常输入、被篡改输入和错误处理；不自行设计密码算法",
+        "rubric": [
+          "明确输入、环境与假设",
+          "保存可重复检查的产出",
+          "解释至少一个失败或反例",
+          "说明独立完成范围与未验证部分"
+        ],
+        "limits": "不能证明全部理论掌握、生产安全、职业胜任或研究创新。",
+        "resource": "电脑"
+      },
+      "sourceClaimIds": [
+        "claim-aead"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2"
+    }
+  ],
+  "edges": [
+    {
+      "id": "belongs_to:ai-ml:cs:",
+      "from": "ai-ml",
+      "to": "cs",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:ai-ml:data:",
+      "from": "ai-ml",
+      "to": "data",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:ai-ml:se:",
+      "from": "ai-ml",
+      "to": "se",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:systems:cs:",
+      "from": "systems",
+      "to": "cs",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:systems:sec:",
+      "from": "systems",
+      "to": "sec",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:cloud-distributed:cs:",
+      "from": "cloud-distributed",
+      "to": "cs",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:cloud-distributed:net:",
+      "from": "cloud-distributed",
+      "to": "net",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:cloud-distributed:data:",
+      "from": "cloud-distributed",
+      "to": "data",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:cloud-distributed:se:",
+      "from": "cloud-distributed",
+      "to": "se",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:embedded-iot:net:",
+      "from": "embedded-iot",
+      "to": "net",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:hci-media:se:",
+      "from": "hci-media",
+      "to": "se",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:theory-algorithms:cs:",
+      "from": "theory-algorithms",
+      "to": "cs",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:networks:net:",
+      "from": "networks",
+      "to": "net",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:networks:sec:",
+      "from": "networks",
+      "to": "sec",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:security-crypto:net:",
+      "from": "security-crypto",
+      "to": "net",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:security-crypto:sec:",
+      "from": "security-crypto",
+      "to": "sec",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:software-systems:se:",
+      "from": "software-systems",
+      "to": "se",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:data-science-systems:data:",
+      "from": "data-science-systems",
+      "to": "data",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "related_to:systems:cloud-distributed:",
+      "from": "systems",
+      "to": "cloud-distributed",
+      "type": "related_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "related_to:embedded-iot:security-crypto:",
+      "from": "embedded-iot",
+      "to": "security-crypto",
+      "type": "related_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-aead"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "related_to:ai-ml:data-science-systems:",
+      "from": "ai-ml",
+      "to": "data-science-systems",
+      "type": "related_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:ml-foundations:ai-ml:",
+      "from": "ml-foundations",
+      "to": "ai-ml",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:project-ml-foundations:ml-foundations:",
+      "from": "project-ml-foundations",
+      "to": "ml-foundations",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:python:project-ml-foundations:ml-foundations:explore",
+      "from": "python",
+      "to": "project-ml-foundations",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "ml-foundations:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:python:project-ml-foundations:",
+      "from": "python",
+      "to": "project-ml-foundations",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:python:project-ml-foundations:",
+      "from": "python",
+      "to": "project-ml-foundations",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:linear:project-ml-foundations:ml-foundations:explore",
+      "from": "linear",
+      "to": "project-ml-foundations",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "ml-foundations:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:linear:project-ml-foundations:",
+      "from": "linear",
+      "to": "project-ml-foundations",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:linear:project-ml-foundations:",
+      "from": "linear",
+      "to": "project-ml-foundations",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:probability:project-ml-foundations:ml-foundations:explore",
+      "from": "probability",
+      "to": "project-ml-foundations",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "ml-foundations:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:probability:project-ml-foundations:",
+      "from": "probability",
+      "to": "project-ml-foundations",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:probability:project-ml-foundations:",
+      "from": "probability",
+      "to": "project-ml-foundations",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:model-eval:project-ml-foundations:ml-foundations:explore",
+      "from": "model-eval",
+      "to": "project-ml-foundations",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "ml-foundations:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:model-eval:project-ml-foundations:",
+      "from": "model-eval",
+      "to": "project-ml-foundations",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:model-eval:project-ml-foundations:",
+      "from": "model-eval",
+      "to": "project-ml-foundations",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:python:project-ml-foundations:ml-foundations:deep",
+      "from": "python",
+      "to": "project-ml-foundations",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "ml-foundations:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:linear:project-ml-foundations:ml-foundations:deep",
+      "from": "linear",
+      "to": "project-ml-foundations",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "ml-foundations:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:probability:project-ml-foundations:ml-foundations:deep",
+      "from": "probability",
+      "to": "project-ml-foundations",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "ml-foundations:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:model-eval:project-ml-foundations:ml-foundations:deep",
+      "from": "model-eval",
+      "to": "project-ml-foundations",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "ml-foundations:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:ai-apps:ai-ml:",
+      "from": "ai-apps",
+      "to": "ai-ml",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:project-ai-apps:ai-apps:",
+      "from": "project-ai-apps",
+      "to": "ai-apps",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:python:project-ai-apps:ai-apps:explore",
+      "from": "python",
+      "to": "project-ai-apps",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "ai-apps:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-torch"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:python:project-ai-apps:",
+      "from": "python",
+      "to": "project-ai-apps",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-torch"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:python:project-ai-apps:",
+      "from": "python",
+      "to": "project-ai-apps",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-torch"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:model-eval:project-ai-apps:ai-apps:explore",
+      "from": "model-eval",
+      "to": "project-ai-apps",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "ai-apps:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-torch"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:model-eval:project-ai-apps:",
+      "from": "model-eval",
+      "to": "project-ai-apps",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-torch"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:model-eval:project-ai-apps:",
+      "from": "model-eval",
+      "to": "project-ai-apps",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-torch"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:python:project-ai-apps:ai-apps:deep",
+      "from": "python",
+      "to": "project-ai-apps",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "ai-apps:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-torch"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:model-eval:project-ai-apps:ai-apps:deep",
+      "from": "model-eval",
+      "to": "project-ai-apps",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "ai-apps:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-torch"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:linux-basics:systems:",
+      "from": "linux-basics",
+      "to": "systems",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:project-linux-basics:linux-basics:",
+      "from": "project-linux-basics",
+      "to": "linux-basics",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:programming:project-linux-basics:linux-basics:explore",
+      "from": "programming",
+      "to": "project-linux-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "linux-basics:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-shell"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:programming:project-linux-basics:",
+      "from": "programming",
+      "to": "project-linux-basics",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-shell"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:programming:project-linux-basics:",
+      "from": "programming",
+      "to": "project-linux-basics",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-shell"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:linux:project-linux-basics:linux-basics:explore",
+      "from": "linux",
+      "to": "project-linux-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "linux-basics:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-shell"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:linux:project-linux-basics:",
+      "from": "linux",
+      "to": "project-linux-basics",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-shell"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:linux:project-linux-basics:",
+      "from": "linux",
+      "to": "project-linux-basics",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-shell"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:programming:project-linux-basics:linux-basics:deep",
+      "from": "programming",
+      "to": "project-linux-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "linux-basics:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-shell"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:linux:project-linux-basics:linux-basics:deep",
+      "from": "linux",
+      "to": "project-linux-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "linux-basics:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-shell"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:systems-performance:systems:",
+      "from": "systems-performance",
+      "to": "systems",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:project-systems-performance:systems-performance:",
+      "from": "project-systems-performance",
+      "to": "systems-performance",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:linux:project-systems-performance:systems-performance:explore",
+      "from": "linux",
+      "to": "project-systems-performance",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "systems-performance:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-perf"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:linux:project-systems-performance:",
+      "from": "linux",
+      "to": "project-systems-performance",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-perf"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:linux:project-systems-performance:",
+      "from": "linux",
+      "to": "project-systems-performance",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-perf"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:measurement:project-systems-performance:systems-performance:explore",
+      "from": "measurement",
+      "to": "project-systems-performance",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "systems-performance:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-perf"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:measurement:project-systems-performance:",
+      "from": "measurement",
+      "to": "project-systems-performance",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-perf"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:measurement:project-systems-performance:",
+      "from": "measurement",
+      "to": "project-systems-performance",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-perf"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:linux:project-systems-performance:systems-performance:deep",
+      "from": "linux",
+      "to": "project-systems-performance",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "systems-performance:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-perf"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:measurement:project-systems-performance:systems-performance:deep",
+      "from": "measurement",
+      "to": "project-systems-performance",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "systems-performance:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-perf"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:distributed-basics:cloud-distributed:",
+      "from": "distributed-basics",
+      "to": "cloud-distributed",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:project-distributed-basics:distributed-basics:",
+      "from": "project-distributed-basics",
+      "to": "distributed-basics",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:programming:project-distributed-basics:distributed-basics:explore",
+      "from": "programming",
+      "to": "project-distributed-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "distributed-basics:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:programming:project-distributed-basics:",
+      "from": "programming",
+      "to": "project-distributed-basics",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:programming:project-distributed-basics:",
+      "from": "programming",
+      "to": "project-distributed-basics",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:network:project-distributed-basics:distributed-basics:explore",
+      "from": "network",
+      "to": "project-distributed-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "distributed-basics:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:network:project-distributed-basics:",
+      "from": "network",
+      "to": "project-distributed-basics",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:network:project-distributed-basics:",
+      "from": "network",
+      "to": "project-distributed-basics",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:distributed:project-distributed-basics:distributed-basics:explore",
+      "from": "distributed",
+      "to": "project-distributed-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "distributed-basics:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:distributed:project-distributed-basics:",
+      "from": "distributed",
+      "to": "project-distributed-basics",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:distributed:project-distributed-basics:",
+      "from": "distributed",
+      "to": "project-distributed-basics",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:programming:project-distributed-basics:distributed-basics:deep",
+      "from": "programming",
+      "to": "project-distributed-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "distributed-basics:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:network:project-distributed-basics:distributed-basics:deep",
+      "from": "network",
+      "to": "project-distributed-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "distributed-basics:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:distributed:project-distributed-basics:distributed-basics:deep",
+      "from": "distributed",
+      "to": "project-distributed-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "distributed-basics:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:cloud-ops:cloud-distributed:",
+      "from": "cloud-ops",
+      "to": "cloud-distributed",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:project-cloud-ops:cloud-ops:",
+      "from": "project-cloud-ops",
+      "to": "cloud-ops",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:linux:project-cloud-ops:cloud-ops:explore",
+      "from": "linux",
+      "to": "project-cloud-ops",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "cloud-ops:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-k8s"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:linux:project-cloud-ops:",
+      "from": "linux",
+      "to": "project-cloud-ops",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-k8s"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:linux:project-cloud-ops:",
+      "from": "linux",
+      "to": "project-cloud-ops",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-k8s"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:containers:project-cloud-ops:cloud-ops:explore",
+      "from": "containers",
+      "to": "project-cloud-ops",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "cloud-ops:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-k8s"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:containers:project-cloud-ops:",
+      "from": "containers",
+      "to": "project-cloud-ops",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-k8s"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:containers:project-cloud-ops:",
+      "from": "containers",
+      "to": "project-cloud-ops",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-k8s"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:linux:project-cloud-ops:cloud-ops:deep",
+      "from": "linux",
+      "to": "project-cloud-ops",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "cloud-ops:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-k8s"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:containers:project-cloud-ops:cloud-ops:deep",
+      "from": "containers",
+      "to": "project-cloud-ops",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "cloud-ops:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-k8s"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:embedded-basics:embedded-iot:",
+      "from": "embedded-basics",
+      "to": "embedded-iot",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:project-embedded-basics:embedded-basics:",
+      "from": "project-embedded-basics",
+      "to": "embedded-basics",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:c:project-embedded-basics:embedded-basics:explore",
+      "from": "c",
+      "to": "project-embedded-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "embedded-basics:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:c:project-embedded-basics:",
+      "from": "c",
+      "to": "project-embedded-basics",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:c:project-embedded-basics:",
+      "from": "c",
+      "to": "project-embedded-basics",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:electronics:project-embedded-basics:embedded-basics:explore",
+      "from": "electronics",
+      "to": "project-embedded-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "embedded-basics:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:electronics:project-embedded-basics:",
+      "from": "electronics",
+      "to": "project-embedded-basics",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:electronics:project-embedded-basics:",
+      "from": "electronics",
+      "to": "project-embedded-basics",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:toolchain:project-embedded-basics:embedded-basics:explore",
+      "from": "toolchain",
+      "to": "project-embedded-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "embedded-basics:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:toolchain:project-embedded-basics:",
+      "from": "toolchain",
+      "to": "project-embedded-basics",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:toolchain:project-embedded-basics:",
+      "from": "toolchain",
+      "to": "project-embedded-basics",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:c:project-embedded-basics:embedded-basics:deep",
+      "from": "c",
+      "to": "project-embedded-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "embedded-basics:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:electronics:project-embedded-basics:embedded-basics:deep",
+      "from": "electronics",
+      "to": "project-embedded-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "embedded-basics:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:toolchain:project-embedded-basics:embedded-basics:deep",
+      "from": "toolchain",
+      "to": "project-embedded-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "embedded-basics:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:iot-basics:embedded-iot:",
+      "from": "iot-basics",
+      "to": "embedded-iot",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:project-iot-basics:iot-basics:",
+      "from": "project-iot-basics",
+      "to": "iot-basics",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:c:project-iot-basics:iot-basics:explore",
+      "from": "c",
+      "to": "project-iot-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "iot-basics:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:c:project-iot-basics:",
+      "from": "c",
+      "to": "project-iot-basics",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:c:project-iot-basics:",
+      "from": "c",
+      "to": "project-iot-basics",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:electronics:project-iot-basics:iot-basics:explore",
+      "from": "electronics",
+      "to": "project-iot-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "iot-basics:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:electronics:project-iot-basics:",
+      "from": "electronics",
+      "to": "project-iot-basics",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:electronics:project-iot-basics:",
+      "from": "electronics",
+      "to": "project-iot-basics",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:network:project-iot-basics:iot-basics:explore",
+      "from": "network",
+      "to": "project-iot-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "iot-basics:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:network:project-iot-basics:",
+      "from": "network",
+      "to": "project-iot-basics",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:network:project-iot-basics:",
+      "from": "network",
+      "to": "project-iot-basics",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:toolchain:project-iot-basics:iot-basics:explore",
+      "from": "toolchain",
+      "to": "project-iot-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "iot-basics:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:toolchain:project-iot-basics:",
+      "from": "toolchain",
+      "to": "project-iot-basics",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:toolchain:project-iot-basics:",
+      "from": "toolchain",
+      "to": "project-iot-basics",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:c:project-iot-basics:iot-basics:deep",
+      "from": "c",
+      "to": "project-iot-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "iot-basics:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:electronics:project-iot-basics:iot-basics:deep",
+      "from": "electronics",
+      "to": "project-iot-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "iot-basics:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:network:project-iot-basics:iot-basics:deep",
+      "from": "network",
+      "to": "project-iot-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "iot-basics:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:toolchain:project-iot-basics:iot-basics:deep",
+      "from": "toolchain",
+      "to": "project-iot-basics",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "iot-basics:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:modern-crypto:security-crypto:",
+      "from": "modern-crypto",
+      "to": "security-crypto",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:project-modern-crypto:modern-crypto:",
+      "from": "project-modern-crypto",
+      "to": "modern-crypto",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:discrete:project-modern-crypto:modern-crypto:explore",
+      "from": "discrete",
+      "to": "project-modern-crypto",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "modern-crypto:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-crypto-math"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:discrete:project-modern-crypto:",
+      "from": "discrete",
+      "to": "project-modern-crypto",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-crypto-math"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:discrete:project-modern-crypto:",
+      "from": "discrete",
+      "to": "project-modern-crypto",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-crypto-math"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:probability:project-modern-crypto:modern-crypto:explore",
+      "from": "probability",
+      "to": "project-modern-crypto",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "modern-crypto:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-crypto-book"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:probability:project-modern-crypto:",
+      "from": "probability",
+      "to": "project-modern-crypto",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-crypto-book"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:probability:project-modern-crypto:",
+      "from": "probability",
+      "to": "project-modern-crypto",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-crypto-book"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:proof:project-modern-crypto:modern-crypto:explore",
+      "from": "proof",
+      "to": "project-modern-crypto",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "modern-crypto:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-crypto-book"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:proof:project-modern-crypto:",
+      "from": "proof",
+      "to": "project-modern-crypto",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-crypto-book"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:proof:project-modern-crypto:",
+      "from": "proof",
+      "to": "project-modern-crypto",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-crypto-book"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:discrete:project-modern-crypto:modern-crypto:deep",
+      "from": "discrete",
+      "to": "project-modern-crypto",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "modern-crypto:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-crypto-math"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:probability:project-modern-crypto:modern-crypto:deep",
+      "from": "probability",
+      "to": "project-modern-crypto",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "modern-crypto:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-crypto-book"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:proof:project-modern-crypto:modern-crypto:deep",
+      "from": "proof",
+      "to": "project-modern-crypto",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "modern-crypto:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-crypto-book"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:number-theory:project-modern-crypto:modern-crypto:deep",
+      "from": "number-theory",
+      "to": "project-modern-crypto",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "modern-crypto:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-crypto-advanced"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:number-theory:project-modern-crypto:",
+      "from": "number-theory",
+      "to": "project-modern-crypto",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-crypto-advanced"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:number-theory:project-modern-crypto:",
+      "from": "number-theory",
+      "to": "project-modern-crypto",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-crypto-advanced"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "belongs_to:crypto-engineering:security-crypto:",
+      "from": "crypto-engineering",
+      "to": "security-crypto",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "belongs_to:project-crypto-engineering:crypto-engineering:",
+      "from": "project-crypto-engineering",
+      "to": "crypto-engineering",
+      "type": "belongs_to",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-cs2023"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:programming:project-crypto-engineering:",
+      "from": "programming",
+      "to": "project-crypto-engineering",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-aead"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:programming:project-crypto-engineering:",
+      "from": "programming",
+      "to": "project-crypto-engineering",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-aead"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:aead:project-crypto-engineering:crypto-engineering:explore",
+      "from": "aead",
+      "to": "project-crypto-engineering",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "crypto-engineering:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-aead"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "applied_in:aead:project-crypto-engineering:",
+      "from": "aead",
+      "to": "project-crypto-engineering",
+      "type": "applied_in",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-aead"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:aead:project-crypto-engineering:",
+      "from": "aead",
+      "to": "project-crypto-engineering",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-aead"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:aead:project-crypto-engineering:crypto-engineering:deep",
+      "from": "aead",
+      "to": "project-crypto-engineering",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "crypto-engineering:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-aead"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:c:project-crypto-engineering:crypto-engineering:explore",
+      "from": "c",
+      "to": "project-crypto-engineering",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "crypto-engineering:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-openssl"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:python:project-crypto-engineering:crypto-engineering:explore",
+      "from": "python",
+      "to": "project-crypto-engineering",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "crypto-engineering:explore"
+      ],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-aead"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "validated_by:c:project-crypto-engineering:",
+      "from": "c",
+      "to": "project-crypto-engineering",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-openssl"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "validated_by:python:project-crypto-engineering:",
+      "from": "python",
+      "to": "project-crypto-engineering",
+      "type": "validated_by",
+      "explanation": "用于导航或提供该活动的局部证据，不自动认定掌握。",
+      "scope": [],
+      "requiredLevel": 2,
+      "sourceClaimIds": [
+        "claim-aead"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": [
+        "解释输入条件",
+        "记录产出和可重复检查",
+        "说明未能验证的部分"
+      ]
+    },
+    {
+      "id": "prerequisite_of:c:project-crypto-engineering:crypto-engineering:deep",
+      "from": "c",
+      "to": "project-crypto-engineering",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "crypto-engineering:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-openssl"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    },
+    {
+      "id": "prerequisite_of:python:project-crypto-engineering:crypto-engineering:deep",
+      "from": "python",
+      "to": "project-crypto-engineering",
+      "type": "prerequisite_of",
+      "explanation": "仅适用于列明目标与任务，不代表所有学习活动均需此前置。",
+      "scope": [
+        "crypto-engineering:deep"
+      ],
+      "requiredLevel": 3,
+      "sourceClaimIds": [
+        "claim-aead"
+      ],
+      "quality": "verified",
+      "verifiedAt": "2026-10-20",
+      "releaseId": "2026-10-20.2",
+      "rubric": []
+    }
+  ],
+  "requirements": [
+    {
+      "id": "ml-foundations:explore:python",
+      "topicId": "ml-foundations",
+      "mode": "explore",
+      "objectiveKey": "ml-foundations:explore",
+      "nodeId": "python",
+      "requiredLevel": 2,
+      "importance": "entry_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "ml-foundations:explore:linear",
+      "topicId": "ml-foundations",
+      "mode": "explore",
+      "objectiveKey": "ml-foundations:explore",
+      "nodeId": "linear",
+      "requiredLevel": 2,
+      "importance": "entry_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "ml-foundations:explore:probability",
+      "topicId": "ml-foundations",
+      "mode": "explore",
+      "objectiveKey": "ml-foundations:explore",
+      "nodeId": "probability",
+      "requiredLevel": 2,
+      "importance": "entry_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "ml-foundations:explore:model-eval",
+      "topicId": "ml-foundations",
+      "mode": "explore",
+      "objectiveKey": "ml-foundations:explore",
+      "nodeId": "model-eval",
+      "requiredLevel": 2,
+      "importance": "stage_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "ml-foundations:explore:optional-programming",
+      "topicId": "ml-foundations",
+      "mode": "explore",
+      "objectiveKey": "ml-foundations:explore",
+      "nodeId": "programming",
+      "requiredLevel": 2,
+      "importance": "optional",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "ml-foundations:deep:python",
+      "topicId": "ml-foundations",
+      "mode": "deep",
+      "objectiveKey": "ml-foundations:deep",
+      "nodeId": "python",
+      "requiredLevel": 3,
+      "importance": "entry_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "ml-foundations:deep:linear",
+      "topicId": "ml-foundations",
+      "mode": "deep",
+      "objectiveKey": "ml-foundations:deep",
+      "nodeId": "linear",
+      "requiredLevel": 3,
+      "importance": "entry_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "ml-foundations:deep:probability",
+      "topicId": "ml-foundations",
+      "mode": "deep",
+      "objectiveKey": "ml-foundations:deep",
+      "nodeId": "probability",
+      "requiredLevel": 3,
+      "importance": "entry_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "ml-foundations:deep:model-eval",
+      "topicId": "ml-foundations",
+      "mode": "deep",
+      "objectiveKey": "ml-foundations:deep",
+      "nodeId": "model-eval",
+      "requiredLevel": 3,
+      "importance": "stage_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "ml-foundations:deep:optional-programming",
+      "topicId": "ml-foundations",
+      "mode": "deep",
+      "objectiveKey": "ml-foundations:deep",
+      "nodeId": "programming",
+      "requiredLevel": 2,
+      "importance": "optional",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-ml"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "ai-apps:explore:python",
+      "topicId": "ai-apps",
+      "mode": "explore",
+      "objectiveKey": "ai-apps:explore",
+      "nodeId": "python",
+      "requiredLevel": 2,
+      "importance": "entry_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-torch"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "ai-apps:explore:model-eval",
+      "topicId": "ai-apps",
+      "mode": "explore",
+      "objectiveKey": "ai-apps:explore",
+      "nodeId": "model-eval",
+      "requiredLevel": 2,
+      "importance": "stage_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-torch"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "ai-apps:explore:optional-measurement",
+      "topicId": "ai-apps",
+      "mode": "explore",
+      "objectiveKey": "ai-apps:explore",
+      "nodeId": "measurement",
+      "requiredLevel": 2,
+      "importance": "optional",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-torch"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "ai-apps:deep:python",
+      "topicId": "ai-apps",
+      "mode": "deep",
+      "objectiveKey": "ai-apps:deep",
+      "nodeId": "python",
+      "requiredLevel": 3,
+      "importance": "entry_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-torch"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "ai-apps:deep:model-eval",
+      "topicId": "ai-apps",
+      "mode": "deep",
+      "objectiveKey": "ai-apps:deep",
+      "nodeId": "model-eval",
+      "requiredLevel": 3,
+      "importance": "stage_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-torch"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "ai-apps:deep:optional-measurement",
+      "topicId": "ai-apps",
+      "mode": "deep",
+      "objectiveKey": "ai-apps:deep",
+      "nodeId": "measurement",
+      "requiredLevel": 2,
+      "importance": "optional",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-torch"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "linux-basics:explore:programming",
+      "topicId": "linux-basics",
+      "mode": "explore",
+      "objectiveKey": "linux-basics:explore",
+      "nodeId": "programming",
+      "requiredLevel": 2,
+      "importance": "entry_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-shell"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "linux-basics:explore:linux",
+      "topicId": "linux-basics",
+      "mode": "explore",
+      "objectiveKey": "linux-basics:explore",
+      "nodeId": "linux",
+      "requiredLevel": 2,
+      "importance": "stage_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-shell"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "linux-basics:explore:optional-measurement",
+      "topicId": "linux-basics",
+      "mode": "explore",
+      "objectiveKey": "linux-basics:explore",
+      "nodeId": "measurement",
+      "requiredLevel": 2,
+      "importance": "optional",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-shell"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "linux-basics:deep:programming",
+      "topicId": "linux-basics",
+      "mode": "deep",
+      "objectiveKey": "linux-basics:deep",
+      "nodeId": "programming",
+      "requiredLevel": 3,
+      "importance": "entry_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-shell"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "linux-basics:deep:linux",
+      "topicId": "linux-basics",
+      "mode": "deep",
+      "objectiveKey": "linux-basics:deep",
+      "nodeId": "linux",
+      "requiredLevel": 3,
+      "importance": "stage_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-shell"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "linux-basics:deep:optional-measurement",
+      "topicId": "linux-basics",
+      "mode": "deep",
+      "objectiveKey": "linux-basics:deep",
+      "nodeId": "measurement",
+      "requiredLevel": 2,
+      "importance": "optional",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-shell"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "systems-performance:explore:linux",
+      "topicId": "systems-performance",
+      "mode": "explore",
+      "objectiveKey": "systems-performance:explore",
+      "nodeId": "linux",
+      "requiredLevel": 2,
+      "importance": "entry_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-perf"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "systems-performance:explore:measurement",
+      "topicId": "systems-performance",
+      "mode": "explore",
+      "objectiveKey": "systems-performance:explore",
+      "nodeId": "measurement",
+      "requiredLevel": 2,
+      "importance": "stage_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-perf"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "systems-performance:explore:optional-measurement",
+      "topicId": "systems-performance",
+      "mode": "explore",
+      "objectiveKey": "systems-performance:explore",
+      "nodeId": "measurement",
+      "requiredLevel": 2,
+      "importance": "optional",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-perf"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "systems-performance:deep:linux",
+      "topicId": "systems-performance",
+      "mode": "deep",
+      "objectiveKey": "systems-performance:deep",
+      "nodeId": "linux",
+      "requiredLevel": 3,
+      "importance": "entry_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-perf"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "systems-performance:deep:measurement",
+      "topicId": "systems-performance",
+      "mode": "deep",
+      "objectiveKey": "systems-performance:deep",
+      "nodeId": "measurement",
+      "requiredLevel": 3,
+      "importance": "stage_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-perf"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "systems-performance:deep:optional-measurement",
+      "topicId": "systems-performance",
+      "mode": "deep",
+      "objectiveKey": "systems-performance:deep",
+      "nodeId": "measurement",
+      "requiredLevel": 2,
+      "importance": "optional",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-perf"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "distributed-basics:explore:programming",
+      "topicId": "distributed-basics",
+      "mode": "explore",
+      "objectiveKey": "distributed-basics:explore",
+      "nodeId": "programming",
+      "requiredLevel": 2,
+      "importance": "entry_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "distributed-basics:explore:network",
+      "topicId": "distributed-basics",
+      "mode": "explore",
+      "objectiveKey": "distributed-basics:explore",
+      "nodeId": "network",
+      "requiredLevel": 2,
+      "importance": "entry_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "distributed-basics:explore:distributed",
+      "topicId": "distributed-basics",
+      "mode": "explore",
+      "objectiveKey": "distributed-basics:explore",
+      "nodeId": "distributed",
+      "requiredLevel": 2,
+      "importance": "stage_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "distributed-basics:explore:optional-measurement",
+      "topicId": "distributed-basics",
+      "mode": "explore",
+      "objectiveKey": "distributed-basics:explore",
+      "nodeId": "measurement",
+      "requiredLevel": 2,
+      "importance": "optional",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "distributed-basics:deep:programming",
+      "topicId": "distributed-basics",
+      "mode": "deep",
+      "objectiveKey": "distributed-basics:deep",
+      "nodeId": "programming",
+      "requiredLevel": 3,
+      "importance": "entry_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "distributed-basics:deep:network",
+      "topicId": "distributed-basics",
+      "mode": "deep",
+      "objectiveKey": "distributed-basics:deep",
+      "nodeId": "network",
+      "requiredLevel": 3,
+      "importance": "entry_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "distributed-basics:deep:distributed",
+      "topicId": "distributed-basics",
+      "mode": "deep",
+      "objectiveKey": "distributed-basics:deep",
+      "nodeId": "distributed",
+      "requiredLevel": 3,
+      "importance": "stage_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "distributed-basics:deep:optional-measurement",
+      "topicId": "distributed-basics",
+      "mode": "deep",
+      "objectiveKey": "distributed-basics:deep",
+      "nodeId": "measurement",
+      "requiredLevel": 2,
+      "importance": "optional",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-dist"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "cloud-ops:explore:linux",
+      "topicId": "cloud-ops",
+      "mode": "explore",
+      "objectiveKey": "cloud-ops:explore",
+      "nodeId": "linux",
+      "requiredLevel": 2,
+      "importance": "entry_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-k8s"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "cloud-ops:explore:containers",
+      "topicId": "cloud-ops",
+      "mode": "explore",
+      "objectiveKey": "cloud-ops:explore",
+      "nodeId": "containers",
+      "requiredLevel": 2,
+      "importance": "stage_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-k8s"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "cloud-ops:explore:optional-measurement",
+      "topicId": "cloud-ops",
+      "mode": "explore",
+      "objectiveKey": "cloud-ops:explore",
+      "nodeId": "measurement",
+      "requiredLevel": 2,
+      "importance": "optional",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-k8s"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "cloud-ops:deep:linux",
+      "topicId": "cloud-ops",
+      "mode": "deep",
+      "objectiveKey": "cloud-ops:deep",
+      "nodeId": "linux",
+      "requiredLevel": 3,
+      "importance": "entry_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-k8s"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "cloud-ops:deep:containers",
+      "topicId": "cloud-ops",
+      "mode": "deep",
+      "objectiveKey": "cloud-ops:deep",
+      "nodeId": "containers",
+      "requiredLevel": 3,
+      "importance": "stage_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-k8s"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "cloud-ops:deep:optional-measurement",
+      "topicId": "cloud-ops",
+      "mode": "deep",
+      "objectiveKey": "cloud-ops:deep",
+      "nodeId": "measurement",
+      "requiredLevel": 2,
+      "importance": "optional",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-k8s"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "embedded-basics:explore:c",
+      "topicId": "embedded-basics",
+      "mode": "explore",
+      "objectiveKey": "embedded-basics:explore",
+      "nodeId": "c",
+      "requiredLevel": 2,
+      "importance": "entry_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "embedded-basics:explore:electronics",
+      "topicId": "embedded-basics",
+      "mode": "explore",
+      "objectiveKey": "embedded-basics:explore",
+      "nodeId": "electronics",
+      "requiredLevel": 2,
+      "importance": "entry_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "embedded-basics:explore:toolchain",
+      "topicId": "embedded-basics",
+      "mode": "explore",
+      "objectiveKey": "embedded-basics:explore",
+      "nodeId": "toolchain",
+      "requiredLevel": 2,
+      "importance": "stage_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "embedded-basics:explore:optional-measurement",
+      "topicId": "embedded-basics",
+      "mode": "explore",
+      "objectiveKey": "embedded-basics:explore",
+      "nodeId": "measurement",
+      "requiredLevel": 2,
+      "importance": "optional",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "embedded-basics:deep:c",
+      "topicId": "embedded-basics",
+      "mode": "deep",
+      "objectiveKey": "embedded-basics:deep",
+      "nodeId": "c",
+      "requiredLevel": 3,
+      "importance": "entry_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "embedded-basics:deep:electronics",
+      "topicId": "embedded-basics",
+      "mode": "deep",
+      "objectiveKey": "embedded-basics:deep",
+      "nodeId": "electronics",
+      "requiredLevel": 3,
+      "importance": "entry_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "embedded-basics:deep:toolchain",
+      "topicId": "embedded-basics",
+      "mode": "deep",
+      "objectiveKey": "embedded-basics:deep",
+      "nodeId": "toolchain",
+      "requiredLevel": 3,
+      "importance": "stage_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "embedded-basics:deep:optional-measurement",
+      "topicId": "embedded-basics",
+      "mode": "deep",
+      "objectiveKey": "embedded-basics:deep",
+      "nodeId": "measurement",
+      "requiredLevel": 2,
+      "importance": "optional",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "iot-basics:explore:c",
+      "topicId": "iot-basics",
+      "mode": "explore",
+      "objectiveKey": "iot-basics:explore",
+      "nodeId": "c",
+      "requiredLevel": 2,
+      "importance": "entry_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "iot-basics:explore:electronics",
+      "topicId": "iot-basics",
+      "mode": "explore",
+      "objectiveKey": "iot-basics:explore",
+      "nodeId": "electronics",
+      "requiredLevel": 2,
+      "importance": "entry_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "iot-basics:explore:network",
+      "topicId": "iot-basics",
+      "mode": "explore",
+      "objectiveKey": "iot-basics:explore",
+      "nodeId": "network",
+      "requiredLevel": 2,
+      "importance": "stage_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "iot-basics:explore:toolchain",
+      "topicId": "iot-basics",
+      "mode": "explore",
+      "objectiveKey": "iot-basics:explore",
+      "nodeId": "toolchain",
+      "requiredLevel": 2,
+      "importance": "stage_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "iot-basics:explore:optional-measurement",
+      "topicId": "iot-basics",
+      "mode": "explore",
+      "objectiveKey": "iot-basics:explore",
+      "nodeId": "measurement",
+      "requiredLevel": 2,
+      "importance": "optional",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "iot-basics:deep:c",
+      "topicId": "iot-basics",
+      "mode": "deep",
+      "objectiveKey": "iot-basics:deep",
+      "nodeId": "c",
+      "requiredLevel": 3,
+      "importance": "entry_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "iot-basics:deep:electronics",
+      "topicId": "iot-basics",
+      "mode": "deep",
+      "objectiveKey": "iot-basics:deep",
+      "nodeId": "electronics",
+      "requiredLevel": 3,
+      "importance": "entry_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "iot-basics:deep:network",
+      "topicId": "iot-basics",
+      "mode": "deep",
+      "objectiveKey": "iot-basics:deep",
+      "nodeId": "network",
+      "requiredLevel": 3,
+      "importance": "stage_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "iot-basics:deep:toolchain",
+      "topicId": "iot-basics",
+      "mode": "deep",
+      "objectiveKey": "iot-basics:deep",
+      "nodeId": "toolchain",
+      "requiredLevel": 3,
+      "importance": "stage_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "iot-basics:deep:optional-measurement",
+      "topicId": "iot-basics",
+      "mode": "deep",
+      "objectiveKey": "iot-basics:deep",
+      "nodeId": "measurement",
+      "requiredLevel": 2,
+      "importance": "optional",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-esp"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "modern-crypto:explore:discrete",
+      "topicId": "modern-crypto",
+      "mode": "explore",
+      "objectiveKey": "modern-crypto:explore",
+      "nodeId": "discrete",
+      "requiredLevel": 2,
+      "importance": "entry_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-crypto-math"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "modern-crypto:explore:probability",
+      "topicId": "modern-crypto",
+      "mode": "explore",
+      "objectiveKey": "modern-crypto:explore",
+      "nodeId": "probability",
+      "requiredLevel": 2,
+      "importance": "entry_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-crypto-book"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "modern-crypto:explore:proof",
+      "topicId": "modern-crypto",
+      "mode": "explore",
+      "objectiveKey": "modern-crypto:explore",
+      "nodeId": "proof",
+      "requiredLevel": 2,
+      "importance": "stage_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-crypto-book"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "modern-crypto:explore:optional-measurement",
+      "topicId": "modern-crypto",
+      "mode": "explore",
+      "objectiveKey": "modern-crypto:explore",
+      "nodeId": "measurement",
+      "requiredLevel": 2,
+      "importance": "optional",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-crypto"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "modern-crypto:deep:discrete",
+      "topicId": "modern-crypto",
+      "mode": "deep",
+      "objectiveKey": "modern-crypto:deep",
+      "nodeId": "discrete",
+      "requiredLevel": 3,
+      "importance": "entry_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-crypto-math"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "modern-crypto:deep:probability",
+      "topicId": "modern-crypto",
+      "mode": "deep",
+      "objectiveKey": "modern-crypto:deep",
+      "nodeId": "probability",
+      "requiredLevel": 3,
+      "importance": "entry_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-crypto-book"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "modern-crypto:deep:proof",
+      "topicId": "modern-crypto",
+      "mode": "deep",
+      "objectiveKey": "modern-crypto:deep",
+      "nodeId": "proof",
+      "requiredLevel": 3,
+      "importance": "stage_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-crypto-book"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "modern-crypto:deep:number-theory",
+      "topicId": "modern-crypto",
+      "mode": "deep",
+      "objectiveKey": "modern-crypto:deep",
+      "nodeId": "number-theory",
+      "requiredLevel": 3,
+      "importance": "stage_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-crypto-advanced"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "modern-crypto:deep:optional-measurement",
+      "topicId": "modern-crypto",
+      "mode": "deep",
+      "objectiveKey": "modern-crypto:deep",
+      "nodeId": "measurement",
+      "requiredLevel": 2,
+      "importance": "optional",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-crypto"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "crypto-engineering:explore:aead",
+      "topicId": "crypto-engineering",
+      "mode": "explore",
+      "objectiveKey": "crypto-engineering:explore",
+      "nodeId": "aead",
+      "requiredLevel": 2,
+      "importance": "stage_required",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-aead"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "crypto-engineering:explore:optional-network",
+      "topicId": "crypto-engineering",
+      "mode": "explore",
+      "objectiveKey": "crypto-engineering:explore",
+      "nodeId": "network",
+      "requiredLevel": 2,
+      "importance": "optional",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-aead"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "crypto-engineering:deep:aead",
+      "topicId": "crypto-engineering",
+      "mode": "deep",
+      "objectiveKey": "crypto-engineering:deep",
+      "nodeId": "aead",
+      "requiredLevel": 3,
+      "importance": "stage_required",
+      "minimumEvidence": "practice",
+      "sourceClaimIds": [
+        "claim-aead"
+      ],
+      "quality": "verified"
+    },
+    {
+      "id": "crypto-engineering:deep:optional-network",
+      "topicId": "crypto-engineering",
+      "mode": "deep",
+      "objectiveKey": "crypto-engineering:deep",
+      "nodeId": "network",
+      "requiredLevel": 2,
+      "importance": "optional",
+      "minimumEvidence": "self",
+      "sourceClaimIds": [
+        "claim-aead"
+      ],
+      "quality": "verified"
+    }
+  ],
+  "clauses": [
+    {
+      "id": "clause:ml-foundations:explore:python",
+      "targetId": "project-ml-foundations",
+      "scope": "ml-foundations:explore",
+      "options": [
+        "prerequisite_of:python:project-ml-foundations:ml-foundations:explore"
+      ]
+    },
+    {
+      "id": "clause:ml-foundations:explore:linear",
+      "targetId": "project-ml-foundations",
+      "scope": "ml-foundations:explore",
+      "options": [
+        "prerequisite_of:linear:project-ml-foundations:ml-foundations:explore"
+      ]
+    },
+    {
+      "id": "clause:ml-foundations:explore:probability",
+      "targetId": "project-ml-foundations",
+      "scope": "ml-foundations:explore",
+      "options": [
+        "prerequisite_of:probability:project-ml-foundations:ml-foundations:explore"
+      ]
+    },
+    {
+      "id": "clause:ml-foundations:explore:model-eval",
+      "targetId": "project-ml-foundations",
+      "scope": "ml-foundations:explore",
+      "options": [
+        "prerequisite_of:model-eval:project-ml-foundations:ml-foundations:explore"
+      ]
+    },
+    {
+      "id": "clause:ml-foundations:deep:python",
+      "targetId": "project-ml-foundations",
+      "scope": "ml-foundations:deep",
+      "options": [
+        "prerequisite_of:python:project-ml-foundations:ml-foundations:deep"
+      ]
+    },
+    {
+      "id": "clause:ml-foundations:deep:linear",
+      "targetId": "project-ml-foundations",
+      "scope": "ml-foundations:deep",
+      "options": [
+        "prerequisite_of:linear:project-ml-foundations:ml-foundations:deep"
+      ]
+    },
+    {
+      "id": "clause:ml-foundations:deep:probability",
+      "targetId": "project-ml-foundations",
+      "scope": "ml-foundations:deep",
+      "options": [
+        "prerequisite_of:probability:project-ml-foundations:ml-foundations:deep"
+      ]
+    },
+    {
+      "id": "clause:ml-foundations:deep:model-eval",
+      "targetId": "project-ml-foundations",
+      "scope": "ml-foundations:deep",
+      "options": [
+        "prerequisite_of:model-eval:project-ml-foundations:ml-foundations:deep"
+      ]
+    },
+    {
+      "id": "clause:ai-apps:explore:python",
+      "targetId": "project-ai-apps",
+      "scope": "ai-apps:explore",
+      "options": [
+        "prerequisite_of:python:project-ai-apps:ai-apps:explore"
+      ]
+    },
+    {
+      "id": "clause:ai-apps:explore:model-eval",
+      "targetId": "project-ai-apps",
+      "scope": "ai-apps:explore",
+      "options": [
+        "prerequisite_of:model-eval:project-ai-apps:ai-apps:explore"
+      ]
+    },
+    {
+      "id": "clause:ai-apps:deep:python",
+      "targetId": "project-ai-apps",
+      "scope": "ai-apps:deep",
+      "options": [
+        "prerequisite_of:python:project-ai-apps:ai-apps:deep"
+      ]
+    },
+    {
+      "id": "clause:ai-apps:deep:model-eval",
+      "targetId": "project-ai-apps",
+      "scope": "ai-apps:deep",
+      "options": [
+        "prerequisite_of:model-eval:project-ai-apps:ai-apps:deep"
+      ]
+    },
+    {
+      "id": "clause:linux-basics:explore:programming",
+      "targetId": "project-linux-basics",
+      "scope": "linux-basics:explore",
+      "options": [
+        "prerequisite_of:programming:project-linux-basics:linux-basics:explore"
+      ]
+    },
+    {
+      "id": "clause:linux-basics:explore:linux",
+      "targetId": "project-linux-basics",
+      "scope": "linux-basics:explore",
+      "options": [
+        "prerequisite_of:linux:project-linux-basics:linux-basics:explore"
+      ]
+    },
+    {
+      "id": "clause:linux-basics:deep:programming",
+      "targetId": "project-linux-basics",
+      "scope": "linux-basics:deep",
+      "options": [
+        "prerequisite_of:programming:project-linux-basics:linux-basics:deep"
+      ]
+    },
+    {
+      "id": "clause:linux-basics:deep:linux",
+      "targetId": "project-linux-basics",
+      "scope": "linux-basics:deep",
+      "options": [
+        "prerequisite_of:linux:project-linux-basics:linux-basics:deep"
+      ]
+    },
+    {
+      "id": "clause:systems-performance:explore:linux",
+      "targetId": "project-systems-performance",
+      "scope": "systems-performance:explore",
+      "options": [
+        "prerequisite_of:linux:project-systems-performance:systems-performance:explore"
+      ]
+    },
+    {
+      "id": "clause:systems-performance:explore:measurement",
+      "targetId": "project-systems-performance",
+      "scope": "systems-performance:explore",
+      "options": [
+        "prerequisite_of:measurement:project-systems-performance:systems-performance:explore"
+      ]
+    },
+    {
+      "id": "clause:systems-performance:deep:linux",
+      "targetId": "project-systems-performance",
+      "scope": "systems-performance:deep",
+      "options": [
+        "prerequisite_of:linux:project-systems-performance:systems-performance:deep"
+      ]
+    },
+    {
+      "id": "clause:systems-performance:deep:measurement",
+      "targetId": "project-systems-performance",
+      "scope": "systems-performance:deep",
+      "options": [
+        "prerequisite_of:measurement:project-systems-performance:systems-performance:deep"
+      ]
+    },
+    {
+      "id": "clause:distributed-basics:explore:programming",
+      "targetId": "project-distributed-basics",
+      "scope": "distributed-basics:explore",
+      "options": [
+        "prerequisite_of:programming:project-distributed-basics:distributed-basics:explore"
+      ]
+    },
+    {
+      "id": "clause:distributed-basics:explore:network",
+      "targetId": "project-distributed-basics",
+      "scope": "distributed-basics:explore",
+      "options": [
+        "prerequisite_of:network:project-distributed-basics:distributed-basics:explore"
+      ]
+    },
+    {
+      "id": "clause:distributed-basics:explore:distributed",
+      "targetId": "project-distributed-basics",
+      "scope": "distributed-basics:explore",
+      "options": [
+        "prerequisite_of:distributed:project-distributed-basics:distributed-basics:explore"
+      ]
+    },
+    {
+      "id": "clause:distributed-basics:deep:programming",
+      "targetId": "project-distributed-basics",
+      "scope": "distributed-basics:deep",
+      "options": [
+        "prerequisite_of:programming:project-distributed-basics:distributed-basics:deep"
+      ]
+    },
+    {
+      "id": "clause:distributed-basics:deep:network",
+      "targetId": "project-distributed-basics",
+      "scope": "distributed-basics:deep",
+      "options": [
+        "prerequisite_of:network:project-distributed-basics:distributed-basics:deep"
+      ]
+    },
+    {
+      "id": "clause:distributed-basics:deep:distributed",
+      "targetId": "project-distributed-basics",
+      "scope": "distributed-basics:deep",
+      "options": [
+        "prerequisite_of:distributed:project-distributed-basics:distributed-basics:deep"
+      ]
+    },
+    {
+      "id": "clause:cloud-ops:explore:linux",
+      "targetId": "project-cloud-ops",
+      "scope": "cloud-ops:explore",
+      "options": [
+        "prerequisite_of:linux:project-cloud-ops:cloud-ops:explore"
+      ]
+    },
+    {
+      "id": "clause:cloud-ops:explore:containers",
+      "targetId": "project-cloud-ops",
+      "scope": "cloud-ops:explore",
+      "options": [
+        "prerequisite_of:containers:project-cloud-ops:cloud-ops:explore"
+      ]
+    },
+    {
+      "id": "clause:cloud-ops:deep:linux",
+      "targetId": "project-cloud-ops",
+      "scope": "cloud-ops:deep",
+      "options": [
+        "prerequisite_of:linux:project-cloud-ops:cloud-ops:deep"
+      ]
+    },
+    {
+      "id": "clause:cloud-ops:deep:containers",
+      "targetId": "project-cloud-ops",
+      "scope": "cloud-ops:deep",
+      "options": [
+        "prerequisite_of:containers:project-cloud-ops:cloud-ops:deep"
+      ]
+    },
+    {
+      "id": "clause:embedded-basics:explore:c",
+      "targetId": "project-embedded-basics",
+      "scope": "embedded-basics:explore",
+      "options": [
+        "prerequisite_of:c:project-embedded-basics:embedded-basics:explore"
+      ]
+    },
+    {
+      "id": "clause:embedded-basics:explore:electronics",
+      "targetId": "project-embedded-basics",
+      "scope": "embedded-basics:explore",
+      "options": [
+        "prerequisite_of:electronics:project-embedded-basics:embedded-basics:explore"
+      ]
+    },
+    {
+      "id": "clause:embedded-basics:explore:toolchain",
+      "targetId": "project-embedded-basics",
+      "scope": "embedded-basics:explore",
+      "options": [
+        "prerequisite_of:toolchain:project-embedded-basics:embedded-basics:explore"
+      ]
+    },
+    {
+      "id": "clause:embedded-basics:deep:c",
+      "targetId": "project-embedded-basics",
+      "scope": "embedded-basics:deep",
+      "options": [
+        "prerequisite_of:c:project-embedded-basics:embedded-basics:deep"
+      ]
+    },
+    {
+      "id": "clause:embedded-basics:deep:electronics",
+      "targetId": "project-embedded-basics",
+      "scope": "embedded-basics:deep",
+      "options": [
+        "prerequisite_of:electronics:project-embedded-basics:embedded-basics:deep"
+      ]
+    },
+    {
+      "id": "clause:embedded-basics:deep:toolchain",
+      "targetId": "project-embedded-basics",
+      "scope": "embedded-basics:deep",
+      "options": [
+        "prerequisite_of:toolchain:project-embedded-basics:embedded-basics:deep"
+      ]
+    },
+    {
+      "id": "clause:iot-basics:explore:c",
+      "targetId": "project-iot-basics",
+      "scope": "iot-basics:explore",
+      "options": [
+        "prerequisite_of:c:project-iot-basics:iot-basics:explore"
+      ]
+    },
+    {
+      "id": "clause:iot-basics:explore:electronics",
+      "targetId": "project-iot-basics",
+      "scope": "iot-basics:explore",
+      "options": [
+        "prerequisite_of:electronics:project-iot-basics:iot-basics:explore"
+      ]
+    },
+    {
+      "id": "clause:iot-basics:explore:network",
+      "targetId": "project-iot-basics",
+      "scope": "iot-basics:explore",
+      "options": [
+        "prerequisite_of:network:project-iot-basics:iot-basics:explore"
+      ]
+    },
+    {
+      "id": "clause:iot-basics:explore:toolchain",
+      "targetId": "project-iot-basics",
+      "scope": "iot-basics:explore",
+      "options": [
+        "prerequisite_of:toolchain:project-iot-basics:iot-basics:explore"
+      ]
+    },
+    {
+      "id": "clause:iot-basics:deep:c",
+      "targetId": "project-iot-basics",
+      "scope": "iot-basics:deep",
+      "options": [
+        "prerequisite_of:c:project-iot-basics:iot-basics:deep"
+      ]
+    },
+    {
+      "id": "clause:iot-basics:deep:electronics",
+      "targetId": "project-iot-basics",
+      "scope": "iot-basics:deep",
+      "options": [
+        "prerequisite_of:electronics:project-iot-basics:iot-basics:deep"
+      ]
+    },
+    {
+      "id": "clause:iot-basics:deep:network",
+      "targetId": "project-iot-basics",
+      "scope": "iot-basics:deep",
+      "options": [
+        "prerequisite_of:network:project-iot-basics:iot-basics:deep"
+      ]
+    },
+    {
+      "id": "clause:iot-basics:deep:toolchain",
+      "targetId": "project-iot-basics",
+      "scope": "iot-basics:deep",
+      "options": [
+        "prerequisite_of:toolchain:project-iot-basics:iot-basics:deep"
+      ]
+    },
+    {
+      "id": "clause:modern-crypto:explore:discrete",
+      "targetId": "project-modern-crypto",
+      "scope": "modern-crypto:explore",
+      "options": [
+        "prerequisite_of:discrete:project-modern-crypto:modern-crypto:explore"
+      ]
+    },
+    {
+      "id": "clause:modern-crypto:explore:probability",
+      "targetId": "project-modern-crypto",
+      "scope": "modern-crypto:explore",
+      "options": [
+        "prerequisite_of:probability:project-modern-crypto:modern-crypto:explore"
+      ]
+    },
+    {
+      "id": "clause:modern-crypto:explore:proof",
+      "targetId": "project-modern-crypto",
+      "scope": "modern-crypto:explore",
+      "options": [
+        "prerequisite_of:proof:project-modern-crypto:modern-crypto:explore"
+      ]
+    },
+    {
+      "id": "clause:modern-crypto:deep:discrete",
+      "targetId": "project-modern-crypto",
+      "scope": "modern-crypto:deep",
+      "options": [
+        "prerequisite_of:discrete:project-modern-crypto:modern-crypto:deep"
+      ]
+    },
+    {
+      "id": "clause:modern-crypto:deep:probability",
+      "targetId": "project-modern-crypto",
+      "scope": "modern-crypto:deep",
+      "options": [
+        "prerequisite_of:probability:project-modern-crypto:modern-crypto:deep"
+      ]
+    },
+    {
+      "id": "clause:modern-crypto:deep:proof",
+      "targetId": "project-modern-crypto",
+      "scope": "modern-crypto:deep",
+      "options": [
+        "prerequisite_of:proof:project-modern-crypto:modern-crypto:deep"
+      ]
+    },
+    {
+      "id": "clause:modern-crypto:deep:number-theory",
+      "targetId": "project-modern-crypto",
+      "scope": "modern-crypto:deep",
+      "options": [
+        "prerequisite_of:number-theory:project-modern-crypto:modern-crypto:deep"
+      ]
+    },
+    {
+      "id": "clause:crypto-engineering:explore:aead",
+      "targetId": "project-crypto-engineering",
+      "scope": "crypto-engineering:explore",
+      "options": [
+        "prerequisite_of:aead:project-crypto-engineering:crypto-engineering:explore"
+      ]
+    },
+    {
+      "id": "clause:crypto-engineering:deep:aead",
+      "targetId": "project-crypto-engineering",
+      "scope": "crypto-engineering:deep",
+      "options": [
+        "prerequisite_of:aead:project-crypto-engineering:crypto-engineering:deep"
+      ]
+    },
+    {
+      "id": "clause:crypto-engineering:explore:language",
+      "targetId": "project-crypto-engineering",
+      "scope": "crypto-engineering:explore",
+      "options": [
+        "prerequisite_of:c:project-crypto-engineering:crypto-engineering:explore",
+        "prerequisite_of:python:project-crypto-engineering:crypto-engineering:explore"
+      ]
+    },
+    {
+      "id": "clause:crypto-engineering:deep:language",
+      "targetId": "project-crypto-engineering",
+      "scope": "crypto-engineering:deep",
+      "options": [
+        "prerequisite_of:c:project-crypto-engineering:crypto-engineering:deep",
+        "prerequisite_of:python:project-crypto-engineering:crypto-engineering:deep"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "cs2023",
+      "title": "计算机课程体系 CS2023",
+      "url": "https://csed.acm.org/",
+      "publisher": "ACM / IEEE-CS / AAAI",
+      "accessedAt": "2026-10-20",
+      "tier": "primary",
+      "status": "verified"
+    },
+    {
+      "id": "ml",
+      "title": "机器学习速成课程准备要求",
+      "url": "https://developers.google.com/machine-learning/crash-course/prereqs-and-prework",
+      "publisher": "Google",
+      "accessedAt": "2026-10-20",
+      "tier": "primary",
+      "status": "verified"
+    },
+    {
+      "id": "torch",
+      "title": "PyTorch 基础",
+      "url": "https://docs.pytorch.org/tutorials/beginner/basics/intro.html",
+      "publisher": "PyTorch",
+      "accessedAt": "2026-10-20",
+      "tier": "primary",
+      "status": "verified"
+    },
+    {
+      "id": "shell",
+      "title": "计算机教育缺失的一课",
+      "url": "https://missing.csail.mit.edu/",
+      "publisher": "MIT",
+      "accessedAt": "2026-10-20",
+      "tier": "primary",
+      "status": "verified"
+    },
+    {
+      "id": "perf",
+      "title": "Linux 性能分析",
+      "url": "https://www.brendangregg.com/linuxperf.html",
+      "publisher": "Brendan Gregg",
+      "accessedAt": "2026-10-20",
+      "tier": "primary",
+      "status": "verified"
+    },
+    {
+      "id": "dist",
+      "title": "分布式系统 6.5840",
+      "url": "https://pdos.csail.mit.edu/6.824/",
+      "publisher": "MIT",
+      "accessedAt": "2026-10-20",
+      "tier": "primary",
+      "status": "verified"
+    },
+    {
+      "id": "k8s",
+      "title": "Kubernetes 基础",
+      "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/",
+      "publisher": "Kubernetes",
+      "accessedAt": "2026-10-20",
+      "tier": "primary",
+      "status": "verified"
+    },
+    {
+      "id": "esp",
+      "title": "ESP-IDF 开始使用",
+      "url": "https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/",
+      "publisher": "Espressif",
+      "accessedAt": "2026-10-20",
+      "tier": "primary",
+      "status": "verified"
+    },
+    {
+      "id": "crypto",
+      "title": "应用密码学教材",
+      "url": "https://toc.cryptobook.us/",
+      "publisher": "Dan Boneh / Victor Shoup",
+      "accessedAt": "2026-10-20",
+      "tier": "primary",
+      "status": "verified"
+    },
+    {
+      "id": "aead",
+      "title": "认证加密 API",
+      "url": "https://cryptography.io/en/latest/hazmat/primitives/aead/",
+      "publisher": "Python Cryptographic Authority",
+      "accessedAt": "2026-10-20",
+      "tier": "primary",
+      "status": "verified"
+    },
+    {
+      "id": "data-major",
+      "title": "数据科学与大数据技术培养方案",
+      "url": "https://www.sc.sdu.edu.cn/info/1018/5876.htm",
+      "publisher": "山东大学",
+      "accessedAt": "2026-10-20",
+      "tier": "primary",
+      "status": "verified"
+    },
+    {
+      "id": "bupt",
+      "title": "本科专业介绍",
+      "url": "https://scs.bupt.edu.cn/info/1015/1605.htm",
+      "publisher": "北京邮电大学",
+      "accessedAt": "2026-10-20",
+      "tier": "primary",
+      "status": "verified"
+    },
+    {
+      "id": "jnu",
+      "title": "网络空间安全本科培养方案",
+      "url": "https://cybsec.jnu.edu.cn/2023/1116/c39603a781291/page.htm",
+      "publisher": "暨南大学",
+      "accessedAt": "2026-10-20",
+      "tier": "primary",
+      "status": "verified"
+    },
+    {
+      "id": "crypto-math",
+      "title": "密码学课程入口要求",
+      "url": "https://www.cse.ust.hk/faculty/cding/COMP3631/",
+      "publisher": "香港科技大学",
+      "accessedAt": "2026-10-20",
+      "tier": "primary",
+      "status": "verified"
+    },
+    {
+      "id": "crypto-advanced",
+      "title": "密码学与安全课程数学背景",
+      "url": "https://www.cse.ust.hk/faculty/cding/COMP5631/",
+      "publisher": "香港科技大学",
+      "accessedAt": "2026-10-20",
+      "tier": "primary",
+      "status": "verified"
+    },
+    {
+      "id": "crypto-book",
+      "title": "密码学教材第二章",
+      "url": "https://toc.cryptobook.us/book.pdf",
+      "publisher": "Dan Boneh / Victor Shoup",
+      "accessedAt": "2026-10-20",
+      "tier": "primary",
+      "status": "verified"
+    },
+    {
+      "id": "openssl",
+      "title": "EVP 认证加密接口",
+      "url": "https://docs.openssl.org/3.5/man3/EVP_EncryptInit/",
+      "publisher": "OpenSSL",
+      "accessedAt": "2026-10-20",
+      "tier": "primary",
+      "status": "verified"
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim-cs2023",
+      "text": "课程报告覆盖多个计算机知识领域；不是中国各校统一培养方案。",
+      "sourceIds": [
+        "cs2023"
+      ],
+      "quality": "verified",
+      "note": "已阅读来源；课程活动与行为等级的映射是本应用的可审查设计，不是来源给出的通用能力标准。"
+    },
+    {
+      "id": "claim-ml",
+      "text": "课程练习使用 Python，建议代数、线性代数、统计基础，微积分用于深入理解。",
+      "sourceIds": [
+        "ml"
+      ],
+      "quality": "verified",
+      "note": "已阅读来源；课程活动与行为等级的映射是本应用的可审查设计，不是来源给出的通用能力标准。"
+    },
+    {
+      "id": "claim-torch",
+      "text": "教程以基本 Python 和深度学习概念为背景，覆盖数据、模型、优化与保存。",
+      "sourceIds": [
+        "torch"
+      ],
+      "quality": "verified",
+      "note": "已阅读来源；课程活动与行为等级的映射是本应用的可审查设计，不是来源给出的通用能力标准。"
+    },
+    {
+      "id": "claim-shell",
+      "text": "课程涉及命令行、开发工具、调试与性能分析。",
+      "sourceIds": [
+        "shell"
+      ],
+      "quality": "verified",
+      "note": "已阅读来源；课程活动与行为等级的映射是本应用的可审查设计，不是来源给出的通用能力标准。"
+    },
+    {
+      "id": "claim-perf",
+      "text": "性能分析需要结合系统指标、工具和测量上下文。",
+      "sourceIds": [
+        "perf"
+      ],
+      "quality": "verified",
+      "note": "已阅读来源；课程活动与行为等级的映射是本应用的可审查设计，不是来源给出的通用能力标准。"
+    },
+    {
+      "id": "claim-dist",
+      "text": "课程讨论容错、复制和一致性，包含编程实验。",
+      "sourceIds": [
+        "dist"
+      ],
+      "quality": "verified",
+      "note": "已阅读来源；课程活动与行为等级的映射是本应用的可审查设计，不是来源给出的通用能力标准。"
+    },
+    {
+      "id": "claim-k8s",
+      "text": "基础教程覆盖部署、探索、扩缩容、更新应用。",
+      "sourceIds": [
+        "k8s"
+      ],
+      "quality": "verified",
+      "note": "已阅读来源；课程活动与行为等级的映射是本应用的可审查设计，不是来源给出的通用能力标准。"
+    },
+    {
+      "id": "claim-esp",
+      "text": "硬件、工具链、构建、烧录和监视是设备起步流程。",
+      "sourceIds": [
+        "esp"
+      ],
+      "quality": "verified",
+      "note": "已阅读来源；课程活动与行为等级的映射是本应用的可审查设计，不是来源给出的通用能力标准。"
+    },
+    {
+      "id": "claim-crypto",
+      "text": "教材覆盖对称密码、公钥密码及安全论证；具体数学要求仍需逐章核验。",
+      "sourceIds": [
+        "crypto"
+      ],
+      "quality": "verified",
+      "note": "已阅读来源；课程活动与行为等级的映射是本应用的可审查设计，不是来源给出的通用能力标准。"
+    },
+    {
+      "id": "claim-aead",
+      "text": "认证加密同时涉及机密性与完整性，nonce 重复与标签验证失败需正确处理。",
+      "sourceIds": [
+        "aead"
+      ],
+      "quality": "verified",
+      "note": "已阅读来源；课程活动与行为等级的映射是本应用的可审查设计，不是来源给出的通用能力标准。"
+    },
+    {
+      "id": "claim-data-major",
+      "text": "专业结合数学统计、计算机与数据采集处理分析能力。",
+      "sourceIds": [
+        "data-major"
+      ],
+      "quality": "verified",
+      "note": "已阅读来源；课程活动与行为等级的映射是本应用的可审查设计，不是来源给出的通用能力标准。"
+    },
+    {
+      "id": "claim-bupt",
+      "text": "网络工程重视计算机与网络工程实践；软件工程涵盖程序开发、系统、网络通信及工程核心课程。仅为校级示例。",
+      "sourceIds": [
+        "bupt"
+      ],
+      "quality": "verified",
+      "note": "已阅读来源；课程活动与行为等级的映射是本应用的可审查设计，不是来源给出的通用能力标准。"
+    },
+    {
+      "id": "claim-jnu",
+      "text": "本科核心包含程序设计、密码学、计算机网络、操作系统和数学基础；实践包括应用密码学等实验。",
+      "sourceIds": [
+        "jnu"
+      ],
+      "quality": "verified",
+      "note": "已阅读来源；课程活动与行为等级的映射是本应用的可审查设计，不是来源给出的通用能力标准。"
+    },
+    {
+      "id": "claim-crypto-math",
+      "text": "该课程要求离散数学或相似数学背景。此应用据此设计理论阅读前的知识诊断，不据课程成绩判断长期适合。",
+      "sourceIds": [
+        "crypto-math"
+      ],
+      "quality": "verified",
+      "note": "已阅读来源；课程活动与行为等级的映射是本应用的可审查设计，不是来源给出的通用能力标准。"
+    },
+    {
+      "id": "claim-crypto-advanced",
+      "text": "这门研究生课程要求离散数学、初等数论与网络基础。仅用于深入数学阅读的准备参考。",
+      "sourceIds": [
+        "crypto-advanced"
+      ],
+      "quality": "verified",
+      "note": "已阅读来源；课程活动与行为等级的映射是本应用的可审查设计，不是来源给出的通用能力标准。"
+    },
+    {
+      "id": "claim-crypto-book",
+      "text": "第二章使用概率定义安全性并给出证明。应用选择解释安全目标与检查论证作为验证任务；不把整个研究生教材作为入门门槛。",
+      "sourceIds": [
+        "crypto-book"
+      ],
+      "quality": "verified",
+      "note": "已阅读来源；课程活动与行为等级的映射是本应用的可审查设计，不是来源给出的通用能力标准。"
+    },
+    {
+      "id": "claim-openssl",
+      "text": "EVP 提供 C 语言加解密及认证加密接口，需处理附加认证数据、标签和验证结果。",
+      "sourceIds": [
+        "openssl"
+      ],
+      "quality": "verified",
+      "note": "已阅读来源；课程活动与行为等级的映射是本应用的可审查设计，不是来源给出的通用能力标准。"
+    }
+  ]
+}

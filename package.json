@@ -1,0 +1,58 @@
+{
+  "name": "learning-direction-cards",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.25.0",
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build --webpack",
+    "start": "next start --hostname 127.0.0.1",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "db:migrate": "node scripts/run.mjs database migrate",
+    "db:seed": "node scripts/run.mjs database seed",
+    "db:generate": "drizzle-kit generate",
+    "knowledge:validate": "node scripts/run.mjs validate",
+    "services:check": "node scripts/run.mjs diagnose",
+    "demo:reset": "node scripts/run.mjs database demo",
+    "demo:run": "node scripts/run.mjs demo",
+    "backup:database": "node scripts/run.mjs backup-database",
+    "package:windows": "node scripts/package-windows.mjs",
+    "test:portable": "node scripts/test-portable.mjs",
+    "audit:release": "node scripts/audit-release.mjs"
+  },
+  "dependencies": {
+    "better-sqlite3": "13.0.3",
+    "drizzle-orm": "0.45.4",
+    "lucide-react": "1.59.0",
+    "next": "16.4.2",
+    "openai": "7.39.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-markdown": "10.1.0",
+    "rehype-sanitize": "6.0.0",
+    "remark-gfm": "4.0.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/better-sqlite3": "9.6.0",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "drizzle-kit": "0.31.11",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "16.4.2",
+    "tailwindcss": "4.3.3",
+    "tsx": "4.23.15",
+    "typescript": "~6.0.0",
+    "vitest": "5.0.5",
+    "esbuild": "0.28.2"
+  },
+  "engines": {
+    "node": ">=24.0.0 <25"
+  }
+}

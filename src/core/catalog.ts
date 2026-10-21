@@ -1,0 +1,14 @@
+import data from '../../knowledge/releases/2026-10-21.5.json';
+import fourth from '../../knowledge/releases/2026-10-20.4.json';
+import third from '../../knowledge/releases/2026-10-20.3.json';
+import previous from '../../knowledge/releases/2026-10-20.2.json';
+import initial from '../../knowledge/releases/2026-10-20.1.json';
+import { releaseSchema } from './schema';
+export const release = releaseSchema.parse(data);
+const archives = [releaseSchema.parse(initial), releaseSchema.parse(previous), releaseSchema.parse(third), releaseSchema.parse(fourth), release];
+export const getRelease = (id: string) => archives.find(r => r.id === id);
+export const findNode = (id: string) => release.nodes.find(n => n.id === id);
+export const nodesOf = (type: string) => release.nodes.filter(n => n.type === type);
+export const children = (id: string) => release.edges.filter(e => e.type === 'belongs_to' && e.to === id).map(e => findNode(e.from)!).filter(Boolean);
+export const parents = (id: string) => release.edges.filter(e => e.type === 'belongs_to' && e.from === id).map(e => findNode(e.to)!).filter(Boolean);
+export const contentList = (value: unknown): string[] => Array.isArray(value) ? value.map(String) : [];

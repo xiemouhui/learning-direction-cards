@@ -1,0 +1,85 @@
+{
+  "checkedAt": "2026-10-20T14:24:19.655Z",
+  "modelRequests": 0,
+  "searchRequests": 3,
+  "samples": [
+    {
+      "topicId": "crypto-engineering",
+      "rows": [
+        {
+          "title": "VTuber 深入浅出应用密码学 9-0-0 理论 从对称加密解密与消息认证码到AEAD模式_哔哩哔哩_bilibili - VTuber 深入浅出应用密码学 9-0-0 理论 从对称加密解密与消息认证码到AEAD模式",
+          "url": "https://www.bilibili.com/video/BV1fZaLz6Ekg/?spm_id_from=333.788.recommend_more_video.4#1"
+        },
+        {
+          "title": "HTTP面试题 - TLS1.3 初次解读 - 目录",
+          "url": "https://www.bilibili.com/opus/710136936655749172#1"
+        },
+        {
+          "title": "VTuber 深入浅出应用密码学 4-2.概念理论为什么成立的数学基础 & 认证加密解密的依赖体系_哔哩哔哩_bilibili - VTuber 深入浅出应用密码学 4-2.概念理论为什么成立的数学基础 & 认证加密解密的依赖体系",
+          "url": "https://www.bilibili.com/video/BV1e14y1n7ud/?spm_id_from=333.1387.homepage.video_card.click#1"
+        },
+        {
+          "title": "目前最流行的非对称加密算法RSA，对称加密和非对称加密的优缺点",
+          "url": "https://www.bilibili.com/read/cv33299431/?opus_fallback=1"
+        },
+        {
+          "title": "OpenVON增强安全性简单指南",
+          "url": "https://www.bilibili.com/read/cv24906110/"
+        }
+      ],
+      "acceptedCount": 2
+    },
+    {
+      "topicId": "ml-foundations",
+      "rows": [
+        {
+          "title": "请推荐一个人工智能学习路线图？ - 请推荐一个人工智能学习路线图",
+          "url": "https://www.bilibili.com/opus/1135430619707211813#1"
+        },
+        {
+          "title": "【2026版】这绝对是B站最好的人工智能入门教程了，整整400集，清华大佬强力打造，从入门到精通，全程通俗易懂，零基础也能学会！-人工智能丨机器学习丨神经网络",
+          "url": "https://www.bilibili.com/video/BV1xRnV6vE4Z/"
+        },
+        {
+          "title": "最新 AI / 机器学习学习路线！强烈建议收藏并反复阅读！ - 目录",
+          "url": "https://www.bilibili.com/opus/1095247846285770753#1"
+        },
+        {
+          "title": "【暑假期必学】零基础一周吃透 Python 与机器学习！从入门原理到代码实战手把手教学，小白也能快速入门！_哔哩哔哩_bilibili - 【暑假期必学】零基础一周吃透 Python 与机器学习！从入门原理到代码实战手把手教学，小白也能快速入门！",
+          "url": "https://www.bilibili.com/video/BV1USVw69EbD/?spm_id_from=333.1387.homepage.video_card.click#1"
+        },
+        {
+          "title": "黑马程序员人工智能学习路线图",
+          "url": "https://www.bilibili.com/opus/367926006888018872?from=articleDetail#1"
+        }
+      ],
+      "acceptedCount": 3
+    },
+    {
+      "topicId": "http-basics",
+      "rows": [
+        {
+          "title": "HTTP协议和TCP协议精讲_哔哩哔哩_bilibili - HTTP协议和TCP协议精讲",
+          "url": "https://www.bilibili.com/video/BV1Mut7zEED7/?spm_id_from=333.788.recommend_more_video.12#1"
+        },
+        {
+          "title": "服务监控与数据埋点【渡一教育】_哔哩哔哩_bilibili - 自动连播",
+          "url": "https://www.bilibili.com/video/BV13aHSzcEJi/#1"
+        },
+        {
+          "title": "HTTP网络协议_哔哩哔哩_bilibili",
+          "url": "https://www.bilibili.com/cheese/play/ss20093?csource=common_hpsearch_null_null&query_from=0&search_id=11005250870046513255&search_query=%e3%80%8aTCP%e6%98%af%e6%80%8e%e6%a0%b7%e5%b7%a5%e4%bd%9c%e7%9a%84%e3%80%8b"
+        },
+        {
+          "title": "【javaweb】第3章 HTTP协议 - 【javaweb】第3章 HTTP协议",
+          "url": "https://www.bilibili.com/opus/1161403824524492803#1"
+        },
+        {
+          "title": "拼客学院陈鑫杰：零基础如何学习Web安全渗透测试？推荐这份史上最详细的自学路线图！ - 1/3",
+          "url": "https://www.bilibili.com/opus/370009482639718684#1"
+        }
+      ],
+      "acceptedCount": 2
+    }
+  ]
+}

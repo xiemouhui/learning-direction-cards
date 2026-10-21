@@ -1,0 +1,52 @@
+import { test, expect } from '@playwright/test';
+test('工作台行动证据可核对，填入草稿不改等级，刷新及备份保留', async ({ page }) => {
+  await page.goto('/dashboard');
+  const post = async (data: unknown) => { const response = await page.request.post('/api/app', { headers: { 'x-app-request': '1', 'idempotency-key': crypto.randomUUID() }, data }); expect(response.ok()).toBe(true); return response.json(); };
+  await page.request.get('/api/app');
+  const path = await post({ action: 'savePath', topicId: 'crypto-engineering', mode: 'explore', hours: 3, resources: ['电脑'], startDate: '2026-10-21', baseVersion: 0 });
+  await post({ action: 'activate', pathId: path.pathId, baseVersion: 1 });
+  await page.reload();
+  const panel = page.getByRole('region', { name: '当前行动', exact: true });
+  await expect(panel.getByRole('heading', { name: '今天先做什么' })).toBeVisible();
+  const projectIndex = path.plan.steps.findIndex((s: { nodeId: string }) => s.nodeId === path.plan.projectId);
+  await panel.getByLabel('本次行动', { exact: true }).selectOption(String(projectIndex));
+  await panel.getByText('开始条件与交付标准', { exact: true }).click();
+  await expect(panel.getByText('完成时核对', { exact: true })).toBeVisible();
+  await panel.getByText('记录本次行动证据', { exact: true }).click();
+  for (const [label, value] of [['环境与输入条件', '虚构本地成熟库'], ['原先预期与完成标准', '正常与篡改案例'], ['实际产出与失败现象', '虚构观察：篡改时认证失败'], ['独立完成范围', '本人记录异常'], ['尚未验证与下一步', '未验证生产安全']]) await panel.getByLabel(label, { exact: true }).fill(value);
+  await panel.getByLabel('实际投入（分钟）').fill('20');
+  await panel.getByRole('button', { name: '保存行动证据' }).click();
+  await expect(panel.getByText('行动证据已保存；知识等级与路线未自动改变。')).toBeVisible();
+  const state = await (await page.request.get('/api/app')).json();
+  expect(state.version).toBe(0); expect(state.knowledge).toEqual({}); expect(state.paths[0].version).toBe(1);
+  await page.reload();
+  await page.getByText(/任务回报 ·/).click();
+  await expect(page.getByText('预期：正常与篡改案例', { exact: true })).toBeVisible();
+  await page.goto('/knowledge?topic=crypto-engineering');
+  await page.locator('.knowledge-item').filter({ has: page.getByRole('heading', { name: '认证加密与安全使用', exact: true }) }).getByRole('button', { name: '核对与修改' }).click();
+  const editor = page.locator('#knowledge-editor');
+  await editor.getByText('可供核对的行动证据（1 条）', { exact: true }).click();
+  await editor.getByRole('button', { name: '将此回报填入证据草稿' }).click();
+  await expect(editor.getByLabel('掌握等级')).toHaveValue('unknown');
+  await expect(editor.getByLabel('证据来源')).toHaveValue('task');
+  expect(await editor.getByLabel('证据与局限', { exact: true }).inputValue()).toContain('未验证生产安全');
+  await page.setViewportSize({ width: 375, height: 1000 });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await editor.screenshot({ path: '.local/evidence-assist-375.png' });
+  expect((await (await page.request.get('/api/app')).json()).knowledge).toEqual({});
+  const backup = await (await page.request.get('/api/app?export=1')).json();
+  expect(backup.records.find((r: { kind: string }) => r.kind === 'attempt').body.context.evidence.minutes).toBe(20);
+});
+test('零预算活动路线只核对条件；三个试点专题有行动契约', async ({ page }) => {
+  await page.goto('/dashboard'); await page.request.get('/api/app');
+  const post = async (data: unknown) => { const response = await page.request.post('/api/app', { headers: { 'x-app-request': '1', 'idempotency-key': crypto.randomUUID() }, data }); expect(response.ok()).toBe(true); return response.json(); };
+  const path = await post({ action: 'savePath', topicId: 'http-basics', mode: 'explore', hours: 0, resources: ['电脑'], startDate: '2026-10-21', baseVersion: 0 });
+  await post({ action: 'activate', pathId: path.pathId, baseVersion: 1 }); await page.reload();
+  await expect(page.getByRole('heading', { name: '当前先核对条件' })).toBeVisible();
+  await expect(page.getByRole('button', { name: '保存行动证据' })).toHaveCount(0);
+  for (const topic of ['ml-foundations', 'http-basics', 'crypto-engineering']) {
+    await page.goto(`/topics/${topic}`);
+    await page.getByText('开始条件、交付证据与验收', { exact: true }).click();
+    await expect(page.getByRole('heading', { name: '卡住后怎么办', exact: true })).toBeVisible();
+  }
+});

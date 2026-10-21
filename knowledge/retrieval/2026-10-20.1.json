@@ -1,0 +1,458 @@
+{
+  "version": "2026-10-20.1",
+  "knowledgeRelease": "2026-10-20.3",
+  "profiles": [
+    {
+      "topicId": "ml-foundations",
+      "queryTerms": [
+        "machine learning",
+        "prerequisites"
+      ],
+      "matchTerms": [
+        "machine learning",
+        "prerequisites",
+        "机器学习"
+      ],
+      "communityTerms": [
+        "机器学习",
+        "入门"
+      ]
+    },
+    {
+      "topicId": "ai-apps",
+      "queryTerms": [
+        "PyTorch",
+        "basics"
+      ],
+      "matchTerms": [
+        "PyTorch",
+        "basics",
+        "tensors",
+        "model evaluation"
+      ],
+      "communityTerms": [
+        "PyTorch",
+        "模型应用"
+      ]
+    },
+    {
+      "topicId": "linux-basics",
+      "queryTerms": [
+        "shell",
+        "command line"
+      ],
+      "matchTerms": [
+        "shell",
+        "command line",
+        "Linux",
+        "命令行"
+      ],
+      "communityTerms": [
+        "Linux",
+        "命令行"
+      ]
+    },
+    {
+      "topicId": "systems-performance",
+      "queryTerms": [
+        "Linux",
+        "performance"
+      ],
+      "matchTerms": [
+        "Linux",
+        "performance",
+        "profiling",
+        "性能"
+      ],
+      "communityTerms": [
+        "Linux",
+        "性能分析"
+      ]
+    },
+    {
+      "topicId": "distributed-basics",
+      "queryTerms": [
+        "distributed systems",
+        "replication"
+      ],
+      "matchTerms": [
+        "distributed systems",
+        "replication",
+        "fault tolerance",
+        "分布式"
+      ],
+      "communityTerms": [
+        "分布式系统",
+        "复制"
+      ]
+    },
+    {
+      "topicId": "cloud-ops",
+      "queryTerms": [
+        "Kubernetes",
+        "deployment"
+      ],
+      "matchTerms": [
+        "Kubernetes",
+        "deployment",
+        "scaling",
+        "部署"
+      ],
+      "communityTerms": [
+        "Kubernetes",
+        "部署"
+      ]
+    },
+    {
+      "topicId": "embedded-basics",
+      "queryTerms": [
+        "ESP-IDF",
+        "getting started"
+      ],
+      "matchTerms": [
+        "ESP-IDF",
+        "ESP32",
+        "getting started",
+        "工具链"
+      ],
+      "communityTerms": [
+        "ESP32",
+        "嵌入式"
+      ]
+    },
+    {
+      "topicId": "iot-basics",
+      "queryTerms": [
+        "ESP32",
+        "network example"
+      ],
+      "matchTerms": [
+        "ESP32",
+        "ESP-IDF",
+        "MQTT",
+        "WiFi",
+        "物联网"
+      ],
+      "communityTerms": [
+        "ESP32",
+        "物联网"
+      ]
+    },
+    {
+      "topicId": "modern-crypto",
+      "queryTerms": [
+        "cryptography",
+        "probability proof"
+      ],
+      "matchTerms": [
+        "cryptography",
+        "encryption",
+        "密码学",
+        "安全证明"
+      ],
+      "communityTerms": [
+        "密码学",
+        "入门"
+      ]
+    },
+    {
+      "topicId": "crypto-engineering",
+      "queryTerms": [
+        "AEAD",
+        "authenticated encryption"
+      ],
+      "matchTerms": [
+        "AEAD",
+        "authenticated encryption",
+        "认证加密",
+        "AES-GCM",
+        "EVP_EncryptInit"
+      ],
+      "communityTerms": [
+        "AEAD",
+        "认证加密"
+      ]
+    },
+    {
+      "topicId": "ros-topics",
+      "queryTerms": [
+        "ROS 2",
+        "topics turtlesim"
+      ],
+      "matchTerms": [
+        "topics",
+        "turtlesim",
+        "publisher",
+        "subscriber",
+        "话题"
+      ],
+      "communityTerms": [
+        "ROS2",
+        "话题"
+      ]
+    },
+    {
+      "topicId": "ros-services",
+      "queryTerms": [
+        "ROS 2",
+        "services parameters"
+      ],
+      "matchTerms": [
+        "services",
+        "parameters",
+        "service client",
+        "服务",
+        "参数"
+      ],
+      "communityTerms": [
+        "ROS2",
+        "服务"
+      ]
+    },
+    {
+      "topicId": "webgl-start",
+      "queryTerms": [
+        "WebGL",
+        "getting started"
+      ],
+      "matchTerms": [
+        "WebGL",
+        "rendering context",
+        "绘图上下文"
+      ],
+      "communityTerms": [
+        "WebGL",
+        "入门"
+      ]
+    },
+    {
+      "topicId": "image-operations",
+      "queryTerms": [
+        "OpenCV",
+        "basic operations images"
+      ],
+      "matchTerms": [
+        "basic operations",
+        "py_basic_ops",
+        "image properties",
+        "region of interest",
+        "图像基本操作"
+      ],
+      "communityTerms": [
+        "OpenCV",
+        "图像操作"
+      ]
+    },
+    {
+      "topicId": "accessible-interface",
+      "queryTerms": [
+        "web accessibility",
+        "easy checks"
+      ],
+      "matchTerms": [
+        "accessibility",
+        "easy checks",
+        "preliminary",
+        "可访问性",
+        "无障碍"
+      ],
+      "communityTerms": [
+        "网页无障碍",
+        "入门"
+      ]
+    },
+    {
+      "topicId": "usability-study",
+      "queryTerms": [
+        "moderated usability testing"
+      ],
+      "matchTerms": [
+        "usability testing",
+        "user research",
+        "可用性测试"
+      ],
+      "communityTerms": [
+        "可用性测试",
+        "用户研究"
+      ]
+    },
+    {
+      "topicId": "algorithm-basics",
+      "queryTerms": [
+        "algorithms",
+        "search complexity"
+      ],
+      "matchTerms": [
+        "algorithms",
+        "search",
+        "complexity",
+        "算法",
+        "复杂度"
+      ],
+      "communityTerms": [
+        "搜索算法",
+        "复杂度"
+      ]
+    },
+    {
+      "topicId": "automata-basics",
+      "queryTerms": [
+        "finite automata",
+        "computability"
+      ],
+      "matchTerms": [
+        "automata",
+        "computability",
+        "finite state",
+        "自动机",
+        "可计算性"
+      ],
+      "communityTerms": [
+        "有限自动机",
+        "入门"
+      ]
+    },
+    {
+      "topicId": "http-basics",
+      "queryTerms": [
+        "HTTP",
+        "request response"
+      ],
+      "matchTerms": [
+        "HTTP",
+        "request",
+        "response",
+        "请求",
+        "响应"
+      ],
+      "communityTerms": [
+        "HTTP",
+        "请求响应"
+      ]
+    },
+    {
+      "topicId": "packet-basics",
+      "queryTerms": [
+        "Wireshark",
+        "packet analysis"
+      ],
+      "matchTerms": [
+        "Wireshark",
+        "packet",
+        "capture",
+        "协议分析",
+        "抓包"
+      ],
+      "communityTerms": [
+        "Wireshark",
+        "抓包"
+      ]
+    },
+    {
+      "topicId": "testing-basics",
+      "queryTerms": [
+        "pytest",
+        "assertions exceptions"
+      ],
+      "matchTerms": [
+        "pytest",
+        "assertions",
+        "fixtures",
+        "getting started",
+        "测试"
+      ],
+      "communityTerms": [
+        "pytest",
+        "软件测试"
+      ]
+    },
+    {
+      "topicId": "version-history",
+      "queryTerms": [
+        "Git",
+        "version control history"
+      ],
+      "matchTerms": [
+        "version control",
+        "history",
+        "Git basics",
+        "版本控制"
+      ],
+      "communityTerms": [
+        "Git",
+        "版本控制"
+      ]
+    },
+    {
+      "topicId": "sql-basics",
+      "queryTerms": [
+        "PostgreSQL",
+        "SQL tutorial joins"
+      ],
+      "matchTerms": [
+        "SQL",
+        "tutorial",
+        "joins",
+        "aggregate",
+        "关系数据"
+      ],
+      "communityTerms": [
+        "SQL",
+        "数据库"
+      ]
+    },
+    {
+      "topicId": "table-inspection",
+      "queryTerms": [
+        "pandas",
+        "read data types missing"
+      ],
+      "matchTerms": [
+        "read write",
+        "read_write",
+        "missing data",
+        "dtypes",
+        "数据类型",
+        "缺失值"
+      ],
+      "communityTerms": [
+        "pandas",
+        "数据清洗"
+      ]
+    },
+    {
+      "topicId": "web-authorization",
+      "queryTerms": [
+        "authorization",
+        "access control"
+      ],
+      "matchTerms": [
+        "authorization",
+        "access control",
+        "授权",
+        "访问控制"
+      ],
+      "communityTerms": [
+        "Web授权",
+        "访问控制"
+      ]
+    },
+    {
+      "topicId": "threat-modeling",
+      "queryTerms": [
+        "threat modeling",
+        "trust boundaries"
+      ],
+      "matchTerms": [
+        "threat modeling",
+        "trust boundaries",
+        "威胁建模",
+        "信任边界"
+      ],
+      "communityTerms": [
+        "威胁建模",
+        "入门"
+      ]
+    }
+  ]
+}

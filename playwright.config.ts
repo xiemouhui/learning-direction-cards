@@ -1,0 +1,2 @@
+import { defineConfig } from '@playwright/test';
+export default defineConfig({testDir:'./tests/e2e',globalTeardown:'./tests/e2e/teardown.mjs',fullyParallel:false,workers:1,timeout:60000,use:{baseURL:'http://127.0.0.1:3001',headless:true,channel:'msedge',screenshot:'only-on-failure',trace:'retain-on-failure'},webServer:{command:'node scripts/test-server.mjs',url:'http://127.0.0.1:3001',reuseExistingServer:false,timeout:60000},reporter:[['list'],['json',{outputFile:'.local/e2e-report.json'}]]});
