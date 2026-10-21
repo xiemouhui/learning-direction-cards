@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { providerConfig, type Environment } from './config';
 import type { AccountInfo, AccountProvider } from '../core/services';
+import { credentialValue } from './secrets';
 
 const money = z.string().regex(/^\d+(?:\.\d+)?$/).max(40);
 const balanceSchema = z.object({ is_available: z.boolean(), balance_infos: z.array(z.object({ currency: z.enum(['CNY', 'USD']), total_balance: money, granted_balance: money, topped_up_balance: money })).min(1).max(2) });
@@ -12,7 +13,7 @@ export async function accountInfo(provider: AccountProvider, options: { env?: En
   const env = options.env ?? process.env;
   if (provider === 'openai') return { status: 'unsupported', message: '当前普通模型 Key 未接入账户余额查询。官方账户用量接口需单独的管理密钥，请在 OpenAI 控制台核对余额与账单。' };
   const config = providerConfig('deepseek', env);
-  const key = provider === 'deepseek' ? config.key : env.TAVILY_API_KEY?.trim();
+  const key = provider === 'deepseek' ? config.key : credentialValue('TAVILY_API_KEY', env);
   if (!key) return { status: 'not_configured', message: '尚未配置此服务的 Key。' };
   if (env.MOCK_AI !== '0') return { status: 'disabled', message: '演示模式不请求外部账户信息。' };
   let url: URL;

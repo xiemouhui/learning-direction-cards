@@ -33,11 +33,14 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    ".next/dev/types/**/*.ts"
+    ".next/dev/types/**/*.ts",
+    ".next-portable/types/**/*.ts",
+    ".next-portable/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
     "dist",
+    ".next-portable",
     ".local"
   ]
 }

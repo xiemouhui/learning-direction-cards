@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, authorizeContext } from './fixtures';
 import type { Page } from '@playwright/test';
 import catalog from '../../knowledge/releases/2026-10-21.5.json';
 async function confirm(page: Page, name: string, level: string, evidence: string) {
@@ -136,7 +136,7 @@ test('匿名隔离、越权、限长和跨站写入', async ({ page, browser }) 
     const a = await page.request.post('/api/app', { headers: { 'x-app-request': '1', 'idempotency-key': crypto.randomUUID() }, data: body });
     expect(a.ok()).toBeTruthy();
     const path = (await a.json()).pathId;
-    const other = await browser.newContext();
+    const other = await browser.newContext(); await authorizeContext(other);
     const otherPage = await other.newPage();
     await otherPage.goto('/');
     await otherPage.request.get('/api/app');

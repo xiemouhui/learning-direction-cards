@@ -10,6 +10,8 @@ import { generateExplanation } from './llm';
 import { searchWeb } from './search';
 import { dailyUsage } from './usage-limits';
 import { searchComparison } from './search-comparison';
+import { reserveInstanceBudget, completeInstanceBudget } from './instance-budget';
+import { containsCredential } from './credential-guard';
 
 export type ChatInput = { action: 'chat'; message: string; topicId?: string; search?: boolean; searchMode?: SearchMode };
 type Dependencies = { env?: Environment; generate?: typeof generateExplanation; search?: typeof searchWeb; compareSearch?: typeof searchComparison; now?: () => string };
@@ -19,6 +21,7 @@ function localReply(hasTopic: boolean, outside: boolean) {
 }
 export async function chat(db: Database.Database, id: string, key: string, input: ChatInput, deps: Dependencies = {}): Promise<ChatResult> {
   const env = deps.env ?? process.env, now = deps.now ?? (() => new Date().toISOString()), startedAt = now();
+  if (containsCredential(input.message, env)) throw new AppError('输入疑似包含 API Key 或认证凭据，未保存或发送。请移除凭据后重试。');
   const deadline = Date.now() + 45000;
   const settings = preferences(db, id, env);
   if (settings.migrationRequired) throw new AppError('顾问需要数据库更新，请先运行 pnpm db:migrate，再重启服务。', 503);
@@ -35,7 +38,7 @@ export async function chat(db: Database.Database, id: string, key: string, input
     const previous = db.prepare('SELECT request_hash,status,body,created_at FROM external_requests WHERE profile_id=? AND key=?').get(id, key) as { request_hash: string; status: string; body: string | null; created_at: string } | undefined;
     if (previous) {
       if (previous.request_hash !== requestHash) throw new AppError('重复请求标识与内容不一致。', 409);
-      if (previous.status === 'complete' && previous.body) return { cached: JSON.parse(previous.body) as ChatResult, runId: null };
+      if (previous.status === 'complete' && previous.body) return { cached: JSON.parse(previous.body) as ChatResult, runId: null, budgetId: null };
       throw new AppError(Date.parse(startedAt) - Date.parse(previous.created_at) > 90000 ? '上次请求已中断，请用新的请求重试。' : '该顾问请求仍在处理中，请稍后查看对话。', 409);
     }
     const count = db.prepare("SELECT count(*) AS count FROM records WHERE profile_id=? AND kind='agentRun' AND created_at>=?").get(id, new Date(Date.parse(startedAt) - 3600000).toISOString()) as { count: number };
@@ -48,10 +51,11 @@ export async function chat(db: Database.Database, id: string, key: string, input
     if (wantsModel && modelRemaining <= 0) throw new AppError('已达到本身份今日模型调用上限；可关闭 AI 使用本地建议，或在设置中调整上限。', 429);
     if (wantsSearch && searchRemaining < requiredSearchCalls) throw new AppError(comparison ? '四平台对照需要预留 4 次检索额度，今日剩余额度不足；可改用快速检索或调整上限。' : '已达到本身份今日检索调用上限；可取消本次联网检索。', 429);
     allowedModelCalls = wantsModel ? Math.min(comparison ? 1 : 2, modelRemaining) : 0;
+    const budgetId = reserveInstanceBudget(db, allowedModelCalls, wantsSearch ? requiredSearchCalls : 0, startedAt, env);
     db.prepare("INSERT INTO external_requests VALUES (?,?,?,'pending',NULL,?,?)").run(id, key, requestHash, startedAt, startedAt);
     store.addRecord(db, id, 'message', { role: 'user', content: input.message, topicId: prepared.topic?.id ?? null }, startedAt);
     const runId = store.addRecord(db, id, 'agentRun', { status: 'pending', provider: settings.provider, model: settings.model, calls: 0, usage: null, modelReserved: allowedModelCalls, searchReserved: wantsSearch ? requiredSearchCalls : 0, searchMode: comparison ? 'compare' : 'quick' }, startedAt);
-    return { cached: null, runId };
+    return { cached: null, runId, budgetId };
   })();
   if (reservation.cached) return reservation.cached;
   let result: ChatResult = { reply: localReply(!!prepared.topic, outside), mode: 'local', provider: null, model: null, questions: [], citations: prepared.sources, notice: null, search: { status: 'not_requested', cached: false, retrievedAt: null } };
@@ -83,6 +87,7 @@ export async function chat(db: Database.Database, id: string, key: string, input
   } else if (!outside && !(comparison && results.length === 0)) result.notice = [result.notice, settings.aiEnabled ? '外部模型尚未就绪或处于演示模式，当前使用本地提示。' : '尚未启用外部模型，当前使用本地提示。'].filter(Boolean).join(' ');
 
   return db.transaction(() => {
+    completeInstanceBudget(db, reservation.budgetId, calls, searchCalls, now());
     // Deletion, provider changes, revocation, or a new profile version during I/O invalidates output.
     if (!db.prepare('SELECT 1 FROM profiles WHERE id=?').get(id)) throw new AppError('资料已删除，本次结果已丢弃。', 409);
     const current = preferences(db, id, env), finishedAt = now();

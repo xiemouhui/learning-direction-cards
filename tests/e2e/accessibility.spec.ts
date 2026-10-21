@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 test('键盘跳转、手机导航与减少动效', async ({ page }) => {
     await page.goto('/');
     await page.keyboard.press('Tab');

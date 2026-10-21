@@ -5,7 +5,7 @@ it('配置检查不联网、不打印密钥或端点，不把配置齐备当账�
     const fetch = vi.fn(() => { throw new Error('must not request'); });
     vi.stubGlobal('fetch', fetch);
     try {
-        const report = configurationReport({ MOCK_AI: '0', DEEPSEEK_API_KEY: 'fixture-private-key', DEEPSEEK_BASE_URL: 'https://example.invalid/private-endpoint', DEEPSEEK_MODEL: 'fixture-model' });
+        const report = configurationReport({ MOCK_AI: '0', DEEPSEEK_API_KEY: 'fixture-private-key', DEEPSEEK_BASE_URL: 'https://example.invalid/private-endpoint', DEEPSEEK_MODEL: 'fixture-model', LDC_ALLOW_CUSTOM_API: '1', LDC_TRUSTED_API_ORIGINS: 'https://example.invalid' });
         expect(report.providers[0].readyForManualTest).toBe(true);
         expect(report.providers[1].readyForManualTest).toBe(false);
         expect(report.accountVerified).toBe(false);

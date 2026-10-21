@@ -12,8 +12,11 @@ for(const file of readdirSync('migrations').filter(f=>/^\d{4}\.sql$/.test(f)).so
  db.transaction(()=>{db.exec(readFileSync('migrations/'+file,'utf8'));db.prepare('INSERT INTO schema_migrations VALUES (?,?)').run(version,new Date().toISOString());})();
 }
 const release=JSON.parse(readFileSync('knowledge/releases/2026-10-20.4.json','utf8')),body=JSON.stringify(release),now=new Date().toISOString();
+// Reset only this disposable suite's instance ledger, never production user data.
+if(env.DATABASE_URL!=='data/e2e.db')throw new Error('Unexpected fixture database.');
+db.exec('DELETE FROM instance_budgets');
 db.prepare('INSERT OR IGNORE INTO knowledge_releases VALUES (?,?,?,?,?)').run(release.id,createHash('sha256').update(body).digest('hex'),body,now,now);db.close();
-Object.assign(process.env,env);
+Object.assign(process.env,env,{LDC_BUILD_DIR:'.next-portable',LDC_ACTIVE_BUILD_DIR:'',LDC_ALLOW_CUSTOM_API:'1',LDC_TRUSTED_API_ORIGINS:new URL(fixture.url).origin,LDC_SECURITY_DIR:process.env.LDC_TEST_SECURITY_DIR??'.local/e2e-security',LDC_SESSION_CREDENTIALS:'1',LDC_AUTH_DIAGNOSTICS:'1'});
 const { default:next }=await import('next');
 const { createServer }=await import('node:http');
 const app=next({dev:false,hostname:'127.0.0.1',port:3001});await app.prepare();const handler=app.getRequestHandler();

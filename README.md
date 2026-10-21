@@ -10,6 +10,8 @@ Windows x64 用户可从 [GitHub Releases](https://github.com/xiemouhui/learning
 
 当前是可运行的阶段一 MVP，含阶段二的本地周反馈。**不是 V2 全量范围验收完成**；真实账户验收、领域进阶内容、完整阶段与资源模型及独立用户评估的差距见 [HANDOFF.md](HANDOFF.md)。
 
+安全版本已加入本机 DPAPI 凭据存储、默认官方接口白名单、本地访问认证与实例级调用上限。配置自己的 Key 前请阅读 [安全说明](docs/security.md)。
+
 ## Windows 快速开始
 
 已在 Windows、Node **24.19.0**、pnpm **11.25.0** 验证。依赖以 `pnpm-lock.yaml` 为准：Next 16.4.2、React 19.3.1、TypeScript 6.0.3、better-sqlite3 13.0.3。维护脚本使用 Node 24 同步模块钩子和 TypeScript 编译器，避免此环境的 tsx 系统用户查询问题。
@@ -21,6 +23,7 @@ pnpm install --frozen-lockfile
 pnpm db:migrate
 pnpm db:seed
 pnpm dev
+# 服务启动后，在另一个根目录终端运行 pnpm open，建立本机访问授权。
 ```
 
 打开终端显示的 [本地入口](http://127.0.0.1:3000)。首次安装需要联网下载依赖；运行核心流程不需要联网。better-sqlite3 13 已携带 Windows x64 N-API 预编译包，本机实测 SQLite 3.53.4；workspace 配置不执行多余的原生重编译。

@@ -8,6 +8,7 @@ import { AppError } from '../core/errors';
 export { AppError } from '../core/errors';
 import { preferences, usageSummary } from '../server/preferences';
 import { serviceCatalog } from '../server/config';
+import { instanceBudgetStatus } from '../server/instance-budget';
 type Row = {
     id: string;
     kind: string;
@@ -61,7 +62,7 @@ export function state(db: Database.Database, id: string) {
             body: string;
             created_at: string;
         }[]).map(v => ({ version: v.version, plan: JSON.parse(v.body) as Planned, createdAt: v.created_at })) }));
-    const services = { preferences: preferences(db, id), catalog: serviceCatalog(), usage: usageSummary(db, id, new Date().toISOString()) };
+    const services = { preferences: preferences(db, id), catalog: serviceCatalog(), usage: usageSummary(db, id, new Date().toISOString()), instanceBudget: instanceBudgetStatus(db, new Date().toISOString()) };
     return { version: p.version, assessment: (p.assessment ? JSON.parse(p.assessment) : null) as Assessment | null, knowledge: knowledge(db, id), paths, records: rows.map(row => ({ id: row.id, kind: row.kind, parentId: row.parent_id, body: JSON.parse(row.body) as Record<string, unknown>, createdAt: row.created_at })), services, mode: services.preferences.aiEnabled && !services.catalog.mock && services.catalog.providers.some(p => p.id === services.preferences.provider && p.configured) && services.preferences.model ? 'external_enabled' : 'local', release: release.id };
 }
 export type AppState = ReturnType<typeof state>;

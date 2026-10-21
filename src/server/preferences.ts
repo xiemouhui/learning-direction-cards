@@ -3,6 +3,7 @@ import { servicePreferencesSchema, type ServicePreferences } from '../core/servi
 import { defaultPreferences, providerConfig, type Environment } from './config';
 import { dailyUsage } from './usage-limits';
 import { AppError } from '../core/errors';
+import { credentialValue } from './secrets';
 
 export function preferences(db: Database.Database, id: string, env: Environment = process.env) {
   // Read-only pages remain usable before the explicit v2 migration.
@@ -18,8 +19,8 @@ export function savePreferences(db: Database.Database, id: string, next: Service
   if (old.migrationRequired) throw new AppError('请先运行 pnpm db:migrate，再重启服务。', 503);
   if (old.revision !== baseRevision) throw new AppError('服务设置已变化，请刷新后重新核对。', 409);
   if ((next.aiEnabled || next.searchEnabled) && !acknowledged) throw new AppError('请先核对发送范围与外部服务调用费用。');
-  if (next.aiEnabled && (!providerConfig(next.provider, env).configured || !next.model)) throw new AppError('所选服务尚未配置有效 Key、接口或模型；请在本机 .env.local 配置并重启。');
-  if (next.searchEnabled && !(next.searchProvider === 'deepseek' ? providerConfig('deepseek', env).configured : !!env.TAVILY_API_KEY?.trim())) throw new AppError('所选检索服务缺少本地 Key 配置。');
+  if (next.aiEnabled && (!providerConfig(next.provider, env).configured || !next.model)) throw new AppError('所选服务尚未配置有效 Key、可信接口或模型；请通过本机凭据工具配置并刷新。');
+  if (next.searchEnabled && !(next.searchProvider === 'deepseek' ? providerConfig('deepseek', env).configured : !!credentialValue('TAVILY_API_KEY', env))) throw new AppError('所选检索服务缺少本地 Key 配置。');
   db.prepare('INSERT INTO service_preferences VALUES (?,?,?,1,?,?) ON CONFLICT(profile_id) DO UPDATE SET body=excluded.body,revision=excluded.revision,consent_version=1,updated_at=excluded.updated_at').run(id, JSON.stringify({ ...next, searchScope: next.searchScope ?? old.searchScope, searchPlatform: next.searchPlatform ?? old.searchPlatform, dailyModelLimit: next.dailyModelLimit ?? old.dailyModelLimit ?? 40, dailySearchLimit: next.dailySearchLimit ?? old.dailySearchLimit ?? 20 }), old.revision + 1, now, now);
   return { saved: true };
 }

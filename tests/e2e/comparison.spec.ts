@@ -1,4 +1,4 @@
-import { test, expect, type Page } from '@playwright/test';
+import { test, expect, type Page } from './fixtures';
 async function enable(page: Page, searchLimit = 20) {
   await page.goto('/settings');
   await page.getByLabel('检索内容范围').selectOption('reference');

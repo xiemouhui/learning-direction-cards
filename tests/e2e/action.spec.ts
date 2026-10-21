@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 test('工作台行动证据可核对，填入草稿不改等级，刷新及备份保留', async ({ page }) => {
   await page.goto('/dashboard');
   const post = async (data: unknown) => { const response = await page.request.post('/api/app', { headers: { 'x-app-request': '1', 'idempotency-key': crypto.randomUUID() }, data }); expect(response.ok()).toBe(true); return response.json(); };

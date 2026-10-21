@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import { mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
+import { resolve, join } from 'node:path';
+import { readCredentialStore, writeCredentialStore } from './security/credentials.mjs';
+const folder = mkdtempSync(resolve('.local', 'credentials-check-'));
+const file = join(folder, 'private', 'credentials.dpapi');
+const canary = 'fictional-security-canary-中文-123456789';
+writeCredentialStore(file, { DEEPSEEK_API_KEY: canary });
+assert.equal(readCredentialStore(file).DEEPSEEK_API_KEY, canary);
+assert.ok(!readFileSync(file, 'utf8').includes(canary));
+writeCredentialStore(file, {}); assert.deepEqual(readCredentialStore(file), {});
+writeFileSync(file, 'corrupt-ciphertext'); assert.throws(() => readCredentialStore(file));
+console.log(JSON.stringify({ passed: true, checks: ['CurrentUser DPAPI roundtrip', 'Unicode key', 'no plaintext in vault', 'remove credential', 'corruption fails closed'] }));

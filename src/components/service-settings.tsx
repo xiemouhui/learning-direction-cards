@@ -20,6 +20,8 @@ function ServiceForm({ initial }: { initial: ServicePreferences & { revision: nu
   const choices = [...new Set([...selected.models, ...(models[draft.provider] ?? []), draft.model].filter(Boolean))];
   function change(patch: Partial<ServicePreferences>) { setDraft({ ...draft, ...patch }); setAcknowledged(false); }
   return <section className="panel"><h2>模型与检索设置</h2>
+    <div className="notice"><strong>Key 只在本机配置</strong><p>此网页不接收原始 API Key。免安装版先启动，再双击“配置模型”；默认仅本次后台运行有效，可选择 Windows 账户级加密保存。不要把 Key 粘贴到顾问、聊天、截图或公开 Issue。</p><p>当前模型接收方：{selected.destination}。自定义代理能接收认证 Key；仅在本机高级设置显式信任后启用。</p></div>
+    <p className="muted">本机今日调用（含未完成预占）：模型 {state.services.instanceBudget.model} / {state.services.instanceBudget.modelLimit}，检索 {state.services.instanceBudget.search} / {state.services.instanceBudget.searchLimit}。跨身份共用，清 Cookie 和删除个人资料不会重置；不是金额预算。</p>
     <div className="actions"><Badge tone={state.mode === 'external_enabled' ? 'blue' : 'green'}>{state.mode === 'external_enabled' ? `${providerLabels[initial.provider]} 外部顾问已启用` : '本地模式'}</Badge><Badge>{catalog.mock ? 'MOCK_AI 未设为 0，不发送外部请求' : '服务器允许外部调用；仍需本人启用'}</Badge></div>
     {initial.migrationRequired && <div className="notice">需要更新数据库：在根目录运行 pnpm db:migrate，再重启服务。原有个人资料会保留。</div>}
     <div className="form-grid" style={{ marginTop: 20 }}>

@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 import { readFile } from 'node:fs/promises';
 
 test('导出 → 清 Cookie → 预览恢复，保留路线和草稿并拒绝重复覆盖', async ({ page }) => {
@@ -17,7 +17,7 @@ test('导出 → 清 Cookie → 预览恢复，保留路线和草稿并拒绝重
   await page.getByRole('button', { name: '下载个人资料 JSON' }).click();
   const download = await downloaded;
   const backup = await readFile((await download.path())!, 'utf8');
-  await page.context().clearCookies();
+  await page.context().clearCookies({ name: 'direction_profile' });
   await page.evaluate(() => localStorage.removeItem('direction-assessment-v1'));
   await page.reload();
   await expect(page.getByText('目前没有已保存路线。', { exact: true })).toBeVisible();

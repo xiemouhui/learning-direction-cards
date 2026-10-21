@@ -11,3 +11,5 @@ playwright-report/
 coverage/
 .local/
 dist/
+.next-portable/
+*.dpapi

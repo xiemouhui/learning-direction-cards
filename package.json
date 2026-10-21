@@ -19,6 +19,9 @@
     "demo:reset": "node scripts/run.mjs database demo",
     "demo:run": "node scripts/run.mjs demo",
     "backup:database": "node scripts/run.mjs backup-database",
+    "build:portable": "node scripts/build-portable.mjs",
+    "credentials:setup": "node scripts/credentials.mjs",
+    "open": "node scripts/open-local.mjs",
     "package:windows": "node scripts/package-windows.mjs",
     "test:portable": "node scripts/test-portable.mjs",
     "audit:release": "node scripts/audit-release.mjs"

@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 test('账户余额手动查询、失败不冒充零余额，手机用量面板可读', async ({ page }) => {
   let queries = 0;
   await page.route('**/api/app', async route => {

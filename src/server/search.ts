@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import { z } from 'zod';
 import type { ChatResult, SearchResult, ServicePreferences } from '../core/services';
 import { providerConfig, type Environment } from './config';
+import { credentialValue } from './secrets';
 import { COMMUNITY_PLATFORMS, publicUrl, rankSearchResults, searchPolicy, type SearchScope } from './search-policy';
 export { publicUrl } from './search-policy';
 
@@ -20,7 +21,7 @@ export async function searchWeb(db: Database.Database, topicRef: string, setting
   const env = options.env ?? process.env, transport = options.transport ?? fetch;
   const base = { cached: false, retrievedAt: null };
   if (!settings.searchEnabled) return { results: [], status: { ...base, status: 'disabled' }, calls: 0 };
-  const config = providerConfig('deepseek', env), key = settings.searchProvider === 'deepseek' ? config.key : env.TAVILY_API_KEY?.trim();
+  const config = providerConfig('deepseek', env), key = settings.searchProvider === 'deepseek' ? config.key : credentialValue('TAVILY_API_KEY', env);
   if (env.MOCK_AI !== '0' || !key || (settings.searchProvider === 'deepseek' && !config.configured)) return { results: [], status: { ...base, status: 'not_configured' }, calls: 0 };
   const policy = searchPolicy(topicRef, settings.searchScope ?? 'community', undefined, settings.searchPlatform ?? 'all');
   if (!policy) return { results: [], status: { ...base, status: 'unsupported' }, calls: 0 };

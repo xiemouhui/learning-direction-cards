@@ -6,40 +6,41 @@ import { build } from 'esbuild';
 
 if (process.platform !== 'win32' || process.arch !== 'x64') throw new Error('当前发布器只支持 Windows x64。');
 const project = process.cwd();
-const version = '0.1.0-preview.1';
+const version = '0.1.0-preview.2';
 const name = `learning-direction-cards-${version}-windows-x64`;
 const destination = resolve('dist', name);
 const vendor = resolve('.local/vendor/node-v24.19.0-win-x64');
 const archiveOnly = process.argv.includes('--archive-only');
-if (existsSync(destination) && !archiveOnly) throw new Error('发布目录已存在，请使用新的空白输出目录，不能覆盖已验收包。');
+if (existsSync(destination) && !archiveOnly && !process.argv.includes('--resume-build')) throw new Error('发布目录已存在，请使用新的空白输出目录，不能覆盖已验收包。');
 if (!archiveOnly) {
-for (const file of ['.next/standalone/server.js', '.next/BUILD_ID', 'LICENSE', join(vendor, 'node.exe'), join(vendor, 'LICENSE')]) if (!existsSync(file)) throw new Error(`缺少打包输入：${basename(file)}`);
+for (const file of ['.next-portable/standalone/server.js', '.next-portable/BUILD_ID', 'LICENSE', join(vendor, 'node.exe'), join(vendor, 'LICENSE')]) if (!existsSync(file)) throw new Error(`缺少打包输入：${basename(file)}`);
 mkdirSync(destination, { recursive: true });
 const app = join(destination, 'app');
-const forbidden = file => /(?:^|[\\/])(?:\.env(?:\..*)?|\.git|data|\.local|test-results)(?:[\\/]|$)/i.test(relative(resolve('.next/standalone'), file)) || /\.(?:db(?:-wal|-shm)?|sqlite3?|log|tsbuildinfo)$/i.test(file);
-cpSync(resolve('.next/standalone'), app, { recursive: true, dereference: true, filter: file => !forbidden(file) });
+const forbidden = file => /(?:^|[\\/])(?:\.env(?:\..*)?|\.git|data|\.local|test-results)(?:[\\/]|$)/i.test(relative(resolve('.next-portable/standalone'), file)) || /^node_modules[\\/]\.pnpm(?:[\\/]|$)/.test(relative(resolve('.next-portable/standalone'), file)) || /\.(?:db(?:-wal|-shm)?|sqlite3?|log|tsbuildinfo|dpapi)$/i.test(file);
+cpSync(resolve('.next-portable/standalone'), app, { recursive: true, dereference: true, filter: file => !forbidden(file) });
 // Windows pnpm junctions point at the original store. Materialize traced packages
 // at the portable root so sibling dependencies resolve without that store.
-for (const entry of readdirSync(resolve('.next/standalone/node_modules/.pnpm'), { withFileTypes: true })) {
+for (const entry of readdirSync(resolve('.next-portable/standalone/node_modules/.pnpm'), { withFileTypes: true })) {
   if (!entry.isDirectory()) continue;
   const at = entry.name.indexOf('@', 1);
   if (at < 0) continue;
   const packageName = entry.name.slice(0, at).replace('+', '/');
-  const source = resolve('.next/standalone/node_modules/.pnpm', entry.name, 'node_modules', packageName);
+  const source = resolve('.next-portable/standalone/node_modules/.pnpm', entry.name, 'node_modules', packageName);
   if (existsSync(source)) cpSync(source, join(app, 'node_modules', packageName), { recursive: true, dereference: true });
 }
-cpSync(resolve('.next/static'), join(app, '.next/static'), { recursive: true });
+cpSync(resolve('.next-portable/static'), join(app, '.next-portable/static'), { recursive: true });
 if (existsSync('public')) cpSync('public', join(app, 'public'), { recursive: true });
 cpSync('migrations', join(app, 'migrations'), { recursive: true });
-await build({ entryPoints: ['scripts/database.ts'], bundle: true, platform: 'node', target: 'node24', format: 'cjs', external: ['better-sqlite3'], outfile: join(app, 'maintenance.cjs'), logLevel: 'silent' });
+await build({ absWorkingDir: project, tsconfig: resolve('tsconfig.json'), entryPoints: [resolve('scripts/database.ts')], bundle: true, platform: 'node', target: 'node24', format: 'cjs', external: ['better-sqlite3'], outfile: join(app, 'maintenance.cjs'), logLevel: 'silent' });
 const runtime = join(destination, 'runtime'); mkdirSync(runtime);
 for (const [from, to] of [['node.exe', 'node.exe'], ['LICENSE', 'LICENSE.txt']]) cpSync(join(vendor, from), join(runtime, to));
 cpSync('scripts/portable/launcher.mjs', join(destination, 'launcher.mjs'));
+cpSync('scripts/security', join(destination, 'security'), { recursive: true });
 cpSync('LICENSE', join(destination, 'LICENSE'));
 cpSync('.env.example', join(destination, 'config.example.env'));
 cpSync('docs/portable-windows.md', join(destination, '使用说明.md'));
 const vbs = (file, text) => writeFileSync(join(destination, file), Buffer.concat([Buffer.from([255, 254]), Buffer.from(text.replaceAll('\n', '\r\n'), 'utf16le')]));
-for (const [label, action] of [['启动', 'start'], ['停止', 'stop'], ['配置模型', 'config'], ['打开数据目录', 'data']]) vbs(`${label}.vbs`, `Option Explicit\nDim sh, fs, root, command\nSet sh = CreateObject("WScript.Shell")\nSet fs = CreateObject("Scripting.FileSystemObject")\nroot = fs.GetParentFolderName(WScript.ScriptFullName)\ncommand = Chr(34) & root & "\\runtime\\node.exe" & Chr(34) & " " & Chr(34) & root & "\\launcher.mjs" & Chr(34) & " ${action}"\nsh.Run command, 0, False\n`);
+for (const [label, action] of [['启动', 'start'], ['停止', 'stop'], ['配置模型', 'config'], ['高级设置', 'settings'], ['打开数据目录', 'data']]) vbs(`${label}.vbs`, `Option Explicit\nDim sh, fs, root, command\nSet sh = CreateObject("WScript.Shell")\nSet fs = CreateObject("Scripting.FileSystemObject")\nroot = fs.GetParentFolderName(WScript.ScriptFullName)\ncommand = Chr(34) & root & "\\runtime\\node.exe" & Chr(34) & " " & Chr(34) & root & "\\launcher.mjs" & Chr(34) & " ${action}"\nsh.Run command, 0, False\n`);
 vbs('notice.vbs', 'If WScript.Arguments.Count > 0 Then MsgBox WScript.Arguments(0), 48, "计算机学习方向卡"\n');
 const notices = [];
 function licenses(directory) {

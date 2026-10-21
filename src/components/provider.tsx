@@ -9,11 +9,21 @@ type Context = {
     mutate: <T = Record<string, unknown>>(body: unknown) => Promise<T>;
 };
 const AppContext = createContext<Context | null>(null);
+let opening: Promise<void> | undefined;
+function authorizeLocalSession() {
+    if (opening) return opening;
+    const token = new URLSearchParams(window.location.hash.slice(1)).get('local-access');
+    if (!token) return Promise.resolve();
+    window.history.replaceState(null, '', window.location.pathname + window.location.search);
+    opening = fetch('/api/local-session', { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-app-request': '1' }, body: JSON.stringify({ token }), cache: 'no-store' }).then(async response => { if (!response.ok) throw new Error('本机授权已过期，请重新使用启动入口或 pnpm open。'); });
+    return opening;
+}
 export function AppProvider({ children }: {
     children: ReactNode;
 }) {
     const [state, setState] = useState<AppState | null>(null), [error, setError] = useState(''), [loading, setLoading] = useState(true);
     const refresh = useCallback(async () => { try {
+        await authorizeLocalSession();
         const r = await fetch('/api/app', { cache: 'no-store' }), data = await r.json();
         if (!r.ok)
             throw new Error(data.error);

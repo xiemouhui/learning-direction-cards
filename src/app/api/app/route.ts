@@ -13,6 +13,8 @@ import { backupPreview, restoreBackup } from '@/server/backup';
 import { revertKnowledge } from '@/db/knowledge-history';
 import { taskEvidenceSchema } from '@/core/task-evidence';
 import { saveAttempt } from '@/db/task-attempt';
+import { containsCredential } from '@/server/credential-guard';
+import { boundedBody } from '@/server/body-limit';
 export const runtime = 'nodejs';
 const cookie = 'direction_profile';
 const planFields = { topicId: z.string().max(100), mode: z.enum(['explore', 'deep']), hours: z.number().min(0).max(80), resources: z.array(z.enum(['电脑', '开发板'])).max(2), startDate: z.iso.date(), branch: z.string().min(1).max(600).optional(), choices: z.record(z.string().min(1).max(600), z.string().min(1).max(600)).refine(value => Object.keys(value).length <= 32).optional() };
@@ -68,7 +70,7 @@ export async function POST(request: NextRequest) {
         const origin = request.headers.get('origin');
         if (origin && origin !== request.nextUrl.origin && origin !== process.env.APP_BASE_URL)
             return responseError('不接受跨站写入。', 403);
-        const raw = await request.text();
+        const raw = await boundedBody(request, 5 * 1024 * 1024);
         if (Buffer.byteLength(raw) > 5 * 1024 * 1024)
             return responseError('输入内容过长。', 413);
         let json: unknown;
@@ -78,6 +80,7 @@ export async function POST(request: NextRequest) {
         catch {
             return responseError('请求不是有效 JSON。', 400);
         }
+        if (containsCredential(JSON.stringify(json), process.env)) return responseError('输入疑似包含 API Key 或认证凭据，未保存或发送。请移除后重试。', 400);
         const action = actionSchema.parse(json), { db, id } = identity(request, false), now = new Date().toISOString();
         if (!['restore', 'restorePreview'].includes(action.action) && Buffer.byteLength(raw) > 16000) return responseError('输入内容过长。', 413);
         if (action.action === 'deleteAll') {

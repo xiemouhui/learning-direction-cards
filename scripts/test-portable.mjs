@@ -1,11 +1,13 @@
 import assert from 'node:assert/strict';
-import { mkdtempSync, readFileSync, existsSync, readdirSync, cpSync } from 'node:fs';
+import { mkdtempSync, readFileSync, existsSync, readdirSync, cpSync, writeFileSync, unlinkSync } from 'node:fs';
 import { resolve, join } from 'node:path';
+import { readCredentialStore } from './security/credentials.mjs';
+import { createBootstrapToken } from './security/local-session.mjs';
 import { execFileSync, spawn } from 'node:child_process';
 import { createHash, randomUUID } from 'node:crypto';
 import net from 'node:net';
 
-const name = 'learning-direction-cards-0.1.0-preview.1-windows-x64';
+const name = 'learning-direction-cards-0.1.0-preview.2-windows-x64';
 const zip = resolve('dist', `${name}.zip`);
 const sha = createHash('sha256').update(readFileSync(zip)).digest('hex');
 assert.equal(sha, readFileSync(`${zip}.sha256`, 'utf8').split(' ')[0]);
@@ -15,36 +17,74 @@ const root = join(folder, name), data = join(folder, '中文 个人资料'), nod
 for (const entry of JSON.parse(readFileSync(join(root, 'FILES-SHA256.json')))) assert.equal(createHash('sha256').update(readFileSync(join(root, entry.path))).digest('hex'), entry.sha256, `Manifest mismatch: ${entry.path}`);
 const port = await new Promise(res => { const s = net.createServer(); s.listen(0, '127.0.0.1', () => { const p = s.address().port; s.close(() => res(p)); }); });
 const origin = `http://127.0.0.1:${port}`;
-const run = (action, location = root, dir = data, p = port) => new Promise((res, rej) => {
+const run = (action, location = root, dir = data, p = port, input) => new Promise((res, rej) => {
   const child = spawn(node, [join(location, 'launcher.mjs'), action, '--data-dir', dir, '--port', String(p), '--no-ui'], { windowsHide: true, env: { ...process.env, PATH: '', DEEPSEEK_API_KEY: 'portable-test-host-canary', DATABASE_URL: join(folder, 'must-not-exist.db') } });
   let output = ''; child.stdout.on('data', b => output += b); child.stderr.on('data', b => output += b);
+  if (input !== undefined) child.stdin.end(input);
   child.on('error', rej); child.on('exit', code => { console.log(JSON.stringify({ action, code, output: output.trim() })); return code === 0 ? res(output.trim()) : rej(new Error(`${action} failed: ${output}`)); });
 });
 const waitClosed = async () => { for (let i = 0; i < 80; i++) { try { await fetch(origin, { signal: AbortSignal.timeout(300) }); } catch { return; } await new Promise(res => setTimeout(res, 100)); } throw new Error('HTTP service did not stop'); };
 let running = false;
 try {
   await run('start'); running = true;
-  console.log('Checking initial HTTP'); assert.equal((await fetch(origin)).status, 200);
-  const first = JSON.parse(readFileSync(join(data, 'service.json')));
-  await run('start'); assert.equal(JSON.parse(readFileSync(join(data, 'service.json'))).pid, first.pid);
-  console.log('Checking personal API'); const initial = await fetch(`${origin}/api/app`); assert.equal(initial.status, 200);
-  const cookie = initial.headers.get('set-cookie').split(';')[0];
+  console.log('Checking initial HTTP'); const home = await fetch(origin); assert.equal(home.status, 200);
+  assert.equal(home.headers.get('set-cookie'), null);
+  const grant = createBootstrapToken(join(data, 'security'));
+  const authorized = await fetch(`${origin}/api/local-session`, { method: 'POST', headers: { origin, 'content-type': 'application/json', 'x-app-request': '1' }, body: JSON.stringify({ token: grant }) });
+  assert.equal(authorized.status, 200);
+  assert.equal((await fetch(`${origin}/api/local-session`, { method: 'POST', headers: { origin, 'content-type': 'application/json', 'x-app-request': '1' }, body: JSON.stringify({ token: grant }) })).status, 401);
+  let access = authorized.headers.get('set-cookie').split(';')[0];
+  assert.equal((await fetch(`${origin}/api/app`)).status, 401);
+  const first = JSON.parse(readFileSync(join(data, '.control/service.json')));
+  await run('start'); assert.equal(JSON.parse(readFileSync(join(data, '.control/service.json'))).pid, first.pid);
+  console.log('Checking personal API'); const initial = await fetch(`${origin}/api/app`, {headers:{cookie:access}}); assert.equal(initial.status, 200);
+  let cookie = access + '; ' + initial.headers.get('set-cookie').split(';')[0];
   const state = await initial.json(); assert.equal(state.paths.length, 0);
   const post = async body => { const r = await fetch(`${origin}/api/app`, { method: 'POST', headers: { cookie, origin, 'content-type': 'application/json', 'x-app-request': '1', 'idempotency-key': randomUUID() }, body: JSON.stringify(body) }); assert.equal(r.status, 200, await r.clone().text()); return r.json(); };
   const saved = await post({ action: 'savePath', topicId: 'crypto-engineering', mode: 'explore', hours: 3, resources: ['电脑'], startDate: '2026-10-21', baseVersion: 0 });
   assert.ok(saved.pathId);
+  const canary = 'fictional-portable-session-credential-123456';
+  const vault = join(data, 'security/credentials.dpapi');
+  const configured = async () => (await (await fetch(`${origin}/api/app`, { headers: { cookie } })).json()).services.catalog.providers.find(p => p.id === 'deepseek').configured;
+  assert.equal(await configured(), false);
+  await run('config', root, data, port, JSON.stringify({ name: 'DEEPSEEK_API_KEY', key: canary, remember: false }));
+  assert.equal(await configured(), true);
+  assert.ok(!JSON.stringify(readCredentialStore(vault)).includes(canary));
+  assert.ok(!(await (await fetch(`${origin}/api/app?export=1`, { headers: { cookie } })).text()).includes(canary));
+  assert.ok(!readFileSync(join(data, 'service.log'), 'utf8').includes(canary));
+  assert.ok(!readFileSync(join(data, '.env'), 'utf8').includes(canary));
   const settings = await (await fetch(`${origin}/settings`)).text();
   assert.ok(!settings.includes('portable-test-host-canary'));
   assert.ok(!existsSync(join(folder, 'must-not-exist.db')));
   await run('stop'); await waitClosed(); running = false;
   const moved = join(folder, '升级 模拟目录'); cpSync(root, moved, { recursive: true });
   await run('start', moved); running = true;
+  assert.equal(await configured(), false);
+  await run('config', moved, data, port, JSON.stringify({ name: 'DEEPSEEK_API_KEY', key: canary, remember: true }));
+  assert.equal(readCredentialStore(vault).DEEPSEEK_API_KEY, canary);
+  assert.ok(!readFileSync(vault, 'utf8').includes(canary));
   console.log('Checking upgraded API'); const restored = await (await fetch(`${origin}/api/app`, { headers: { cookie } })).json();
   assert.ok(restored.paths.some(p => p.id === saved.pathId));
   assert.ok(readdirSync(join(data, 'backups')).some(f => f.endsWith('.db')));
   await run('stop', moved); await waitClosed(); running = false;
+  await run('start', moved); running = true;
+  assert.equal(await configured(), true);
+  await run('config', moved, data, port, JSON.stringify({ name: 'DEEPSEEK_API_KEY', key: '', remember: false }));
+  assert.equal(await configured(), false);
+  assert.deepEqual(readCredentialStore(vault), {});
+  await run('stop', moved); await waitClosed(); running = false;
+  const fakeToken = 'b'.repeat(64);
+  const pipeName = `\\\\.\\pipe\\learning-direction-cards-${createHash('sha256').update(data.toLowerCase()).digest('hex').slice(0, 24)}`;
+  let received = '';
+  const impostor = net.createServer(socket => { socket.on('data', bytes => { received += bytes; socket.end(JSON.stringify({ proof: '0'.repeat(64) }) + '\n'); }); });
+  writeFileSync(join(data, '.control/service.json'), JSON.stringify({ token: fakeToken }));
+  await new Promise(res => impostor.listen(pipeName, res));
+  try {
+    await assert.rejects(run('config', moved, data, port, JSON.stringify({ name: 'DEEPSEEK_API_KEY', key: canary, remember: true })));
+    assert.ok(!received.includes(canary)); assert.ok(!received.includes(fakeToken));
+  } finally { await new Promise(res => impostor.close(res)); unlinkSync(join(data, '.control/service.json')); }
   const blocker = net.createServer(); await new Promise(res => blocker.listen(port, '127.0.0.1', res));
   try { await assert.rejects(run('start', root, join(folder, '端口冲突空白资料'))); assert.ok(!existsSync(join(folder, '端口冲突空白资料', 'app.db'))); assert.ok(blocker.listening); } finally { blocker.close(); }
   assert.deepEqual(JSON.parse(await run('status')), { running: false });
-  console.log(JSON.stringify({ passed: true, zipChecksum: sha, checks: ['actual ZIP extraction', 'bundled runtime with empty PATH', 'Chinese/spaced data path', 'fresh database', 'duplicate launch', 'save route', 'clean host environment', 'stop HTTP listener', 'new-folder upgrade preserves route', 'online backup', 'port conflict preserves other process'] }));
+  console.log(JSON.stringify({ passed: true, zipChecksum: sha, checks: ['actual ZIP and every file checksum', 'bundled runtime with empty PATH', 'Chinese/spaced data path', 'fresh database', 'duplicate launch', 'save route', 'clean host environment', 'unauthorized API denied', 'session credential not persisted', 'DPAPI credential survives restart', 'credential removal', 'no key in export or logs', 'impostor pipe receives no key or token', 'stop HTTP listener', 'new-folder upgrade preserves route', 'online backup', 'port conflict preserves other process'] }));
 } finally { if (running) await run('stop').catch(() => {}); }

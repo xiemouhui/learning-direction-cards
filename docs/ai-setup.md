@@ -1,5 +1,7 @@
 # DeepSeek / OpenAI 模型选择与检索
 
+> 安全版本优先使用本机凭据工具：免安装版“配置模型”，源码版 `pnpm credentials:setup`。旧 .env.local Key 使用 `node scripts/credentials.mjs --import-env` 迁移。下面的环境变量示例仅供开发者兼容，不代表安全保存方式；自定义接口默认拒绝，完整规则见 [安全说明](security.md)。
+
 当前代码已支持两家模型、账户模型清单、手动模型 ID、独立检索开关、来源引用、调用统计、格式/引用校验和本地兜底。2026-10-20 经用户授权，DeepSeek 当前模型完成一次真实接入验收；搜索接口连通，但返回结果偏题，质量待改进。OpenAI/Tavily 尚未真实验收，详见 live-service-acceptance.md。自动测试仍使用 fixture，与真实验收分开。
 
 ## 1. 在本机填写密钥

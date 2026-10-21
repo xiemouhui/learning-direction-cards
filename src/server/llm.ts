@@ -1,6 +1,8 @@
 import OpenAI from 'openai';
 import { draftSchema, type AdvisorDraft, type Provider, type Usage } from '../core/services';
 import { providerConfig, type Environment } from './config';
+import { authenticatedFetch } from './endpoint-policy';
+import { containsCredential } from './credential-guard';
 
 export type ExplanationInput = { provider: Provider; model: string; context: unknown; sourceIds: string[]; evidenceIds: string[] };
 export type ExplanationResult = { draft: AdvisorDraft | null; usage: Usage; calls: number; reason: string | null };
@@ -39,7 +41,8 @@ export function validateDraft(raw: string, sourceIds: string[], evidenceIds: str
 export async function generateExplanation(input: ExplanationInput, options: { env?: Environment; transport?: typeof fetch; timeoutMs?: number; deadline?: number; maxCalls?: number } = {}): Promise<ExplanationResult> {
   const config = providerConfig(input.provider, options.env);
   if (!config.configured || config.mock || !input.model) return { draft: null, usage: emptyUsage, calls: 0, reason: '外部模型配置不完整或当前为演示模式。' };
-  const client = new OpenAI({ apiKey: config.key, baseURL: config.baseURL, maxRetries: 0, timeout: options.timeoutMs ?? 20000, fetch: options.transport });
+  if (containsCredential(JSON.stringify(input.context), options.env ?? process.env)) return { draft: null, usage: emptyUsage, calls: 0, reason: '上下文疑似包含认证凭据，已阻止发送；请核对本机对话和输入。' };
+  const client = new OpenAI({ apiKey: config.key, baseURL: config.baseURL, maxRetries: 0, logLevel: 'off', timeout: options.timeoutMs ?? 20000, fetch: authenticatedFetch(config.baseURL, options.transport) });
   const deadline = Math.min(options.deadline ?? Infinity, Date.now() + Math.min(45000, (options.timeoutMs ?? 20000) * 2 + 1000));
   let calls = 0, usage: Usage = { inputTokens: 0, outputTokens: 0, totalTokens: 0 };
   for (let attempt = 0; attempt < Math.max(0, Math.min(2, Math.floor(options.maxCalls ?? 2))); attempt++) {
@@ -74,9 +77,9 @@ export async function generateExplanation(input: ExplanationInput, options: { en
 
 export async function accountModels(provider: Provider, env: Environment = process.env, transport?: typeof fetch) {
   const c = providerConfig(provider, env);
-  if (!c.configured || c.mock) throw new Error('请先配置该服务的 Key，设置 MOCK_AI=0 并重启；只发送认证信息，不发送个人画像。');
+  if (!c.configured || c.mock) throw new Error('请先通过本机凭据工具配置 Key，确认接口可信并设置 MOCK_AI=0；只发送认证信息，不发送个人画像。');
   try {
-    const client = new OpenAI({ apiKey: c.key, baseURL: c.baseURL, timeout: 10000, maxRetries: 0, fetch: transport });
+    const client = new OpenAI({ apiKey: c.key, baseURL: c.baseURL, timeout: 10000, maxRetries: 0, logLevel: 'off', fetch: authenticatedFetch(c.baseURL, transport) });
     const response = await client.models.list();
     return [...new Set(response.data.map(m => m.id).filter(id => /^[A-Za-z0-9][A-Za-z0-9_.:/-]{0,99}$/.test(id)))].sort().slice(0, 300);
   } catch { throw new Error('无法读取账户模型，请检查接口、Key 和网络；可手动填写控制台中的模型 ID。'); }
