@@ -85,7 +85,7 @@ pnpm dev
 
 未填写是未知，0 是明确未了解。结构化自评先预览后确认；课程与任务回报不会自动修改等级。路线支持最多三条候选对比与合法支路切换；保存当前选择为非活动状态，明确启用后最多一条活动计划。确认知识与采用新路线分开进行。
 
-## 可复现密码学演示
+## 具体演示
 
 ```powershell
 pnpm demo:reset
@@ -122,6 +122,8 @@ E2E 使用已安装的 Microsoft Edge、独立 `data/e2e.db`、端口 3001；先
 
 设置页可白名单导出 JSON、单路线级联删除、二次确认删除全部个人资料。删除全部包括知识、快照、路线、回报、对话、调用元数据、幂等和浏览器草稿；公共库保留。下载和备份无法回收。数据库、Key、日志及测试截图不提交 Git。
 
+备份与撤销：[个人恢复和数据库备份](docs/backup-recovery.md)。`pnpm backup:database` 创建本机一致性备份；设置页导出 JSON 可先预览、再恢复到空白身份，外部开关默认关闭。
+
 ## 状态与故障
 
 - 无 Key：完整本地核心可用。设置页明确显示模板模式。
@@ -132,12 +134,10 @@ E2E 使用已安装的 Microsoft Edge、独立 `data/e2e.db`、端口 3001；先
 
 详细证据：[测试报告](docs/test-report.md)、[方法](docs/methodology.md)、[需求映射](docs/requirements.md)、[人工评估方案](docs/user-evaluation.md)。
 
-## 多服务商升级
+## 模型支持
 
-已接入 DeepSeek Chat Completions、ChatGPT Responses 和 DeepSeek/Tavily 检索。两家 Key 独立，设置中选择具体模型；默认须本人启用。当前自动测试与浏览器验收记录见 docs/test-report.md。DeepSeek 最小模型与余额查询已实测；最新十二次独立搜索保留九条线索，其中小红书仍为零，三个专题均为部分召回，详见 [真实搜索验收](docs/search-acceptance-2026-10-21.md)。ChatGPT/Tavily 未真实验收。设置支持快速/四平台对照检索、每日调用上限、账户信息，配置教程见 docs/ai-setup.md。
+学习顾问支持选择 **DeepSeek** 或 **ChatGPT**，并选择对应的具体模型。
 
-后续验收顺序与具体完成条件见 [剩余工作](docs/completion-plan.md)。
+两家服务分别配置自己的 API Key，在“设置与隐私 → 模型与检索设置”中选择并启用。无需配置 API Key，也可以使用本地核心功能。配置方法见 [模型接入说明](docs/ai-setup.md)。
 
-备份与撤销：[个人恢复和数据库备份](docs/backup-recovery.md)。`pnpm backup:database` 创建本机一致性备份；设置页导出 JSON 可先预览、再恢复到空白身份，外部开关默认关闭。
-
-学习顾问新增 [快速检索与四平台实时对照](docs/search-modes.md)：勾选联网后选择本次方式。对照每站独立请求一次、不读缓存、逐平台报告状态，最后最多一次模型总结；没有网页时跳过总结。新模式已执行十二次真实搜索，三个专题均部分召回；全平台质量和总结忠实性仍待验收。最新 158 项自动测试与 20 项浏览器验收通过。
+当前仍处于预览阶段，完整验收尚未完成。
