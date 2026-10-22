@@ -20,6 +20,8 @@ Windows x64 用户可从 [GitHub Releases](https://github.com/xiemouhui/learning
 
 从认识方向开始，用一次小实践判断下一步。没有 API Key，也能完成下面的核心流程；已有明确目标的用户，可以直接选择领域或专题。
 
+需要保存或打印时，可下载[零基础使用与功能说明书 Word 版](计算机学习方向卡%20零基础使用与功能说明书.docx)，第 29—30 页提供与下图一致的分步流程图。
+
 ```mermaid
 flowchart TD
     A([开始使用方向卡]) --> B[探索方向<br/>认识专业、领域和专题]
