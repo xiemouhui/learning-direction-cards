@@ -15,7 +15,7 @@ test('账户余额手动查询、失败不冒充零余额，手机用量面板�
   await expect(panel.getByText('可用余额 12.34 CNY', { exact: true })).toBeVisible();
   await expect(panel.getByText('赠送余额 2.00 · 充值余额 10.34', { exact: true })).toBeVisible();
   await expect(page.getByText('本应用 · 当前身份最近七天用量', { exact: true })).toBeVisible();
-  await expect(page.getByRole('region', { name: 'OpenAI 账户信息' })).toContainText('管理密钥');
+  await expect(page.getByRole('region', { name: 'ChatGPT 账户信息' })).toContainText('管理密钥');
   await expect(page.getByRole('button', { name: '刷新 Tavily 额度' })).toBeDisabled();
   await page.setViewportSize({ width: 375, height: 1000 });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
@@ -30,7 +30,7 @@ test('账户余额手动查询、失败不冒充零余额，手机用量面板�
   expect(response.ok()).toBe(true);
   expect(await response.json()).toMatchObject({ status: 'unsupported' });
 });
-test('选择 DeepSeek／OpenAI 与具体模型，真实 SDK 经本地 HTTP fixture 交互', async ({ page }) => {
+test('选择 DeepSeek／ChatGPT 与具体模型，真实 SDK 经本地 HTTP fixture 交互', async ({ page }) => {
   await page.goto('/settings');
   await page.getByLabel('模型服务商').selectOption('deepseek');
   await expect(page.getByLabel('检索内容范围')).toHaveValue('community');
@@ -65,12 +65,12 @@ test('选择 DeepSeek／OpenAI 与具体模型，真实 SDK 经本地 HTTP fixtu
   await page.getByLabel('具体模型').selectOption('fixture-openai-b');
   await page.getByLabel('我理解发送范围和可能产生的 API 费用').check();
   await page.getByRole('button', { name: '保存模型与检索设置' }).click();
-  await expect(page.getByText('OpenAI 外部顾问已启用', { exact: true })).toBeVisible();
+  await expect(page.getByText('ChatGPT 外部顾问已启用', { exact: true })).toBeVisible();
   await page.goto('/advisor');
   await page.getByLabel('本次讨论的专题').selectOption('crypto-engineering');
   await page.getByLabel('关于下一步的疑问').fill('虚构验收：请用当前模型解释待验证。');
   await page.getByRole('button', { name: '发送给所选模型' }).click();
-  await expect(page.locator('.chat-message small').filter({ hasText: 'OpenAI · fixture-openai-b' })).toBeVisible();
+  await expect(page.locator('.chat-message small').filter({ hasText: 'ChatGPT · fixture-openai-b' })).toBeVisible();
   await expect(page.locator('.chat-message small').filter({ hasText: 'DeepSeek · fixture-deepseek-a' })).toBeVisible();
   const state = await (await page.request.get('/api/app')).json();
   expect(state.services.usage.externalCalls).toBe(2); expect(state.services.usage.searchCalls).toBe(1); expect(state.services.usage.knownTokens).toBe(60);
@@ -79,7 +79,7 @@ test('选择 DeepSeek／OpenAI 与具体模型，真实 SDK 经本地 HTTP fixtu
   await page.getByLabel('检索内容范围').selectOption('reference');
   await page.getByLabel('我理解发送范围和可能产生的 API 费用').check();
   await page.getByRole('button', { name: '保存模型与检索设置' }).click();
-  await expect(page.getByText('OpenAI 外部顾问已启用', { exact: true })).toBeVisible();
+  await expect(page.getByText('ChatGPT 外部顾问已启用', { exact: true })).toBeVisible();
   await page.reload();
   await expect(page.getByLabel('检索内容范围')).toHaveValue('reference');
 });

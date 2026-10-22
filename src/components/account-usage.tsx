@@ -5,7 +5,7 @@ import { useApp } from './provider';
 
 const accounts = [
   { id: 'deepseek', name: 'DeepSeek', url: 'https://platform.deepseek.com/usage' },
-  { id: 'openai', name: 'OpenAI', url: 'https://platform.openai.com/usage' },
+  { id: 'openai', name: 'ChatGPT', url: 'https://platform.openai.com/usage' },
   { id: 'tavily', name: 'Tavily', url: 'https://app.tavily.com/' },
 ] as const;
 export function AccountUsage() {
@@ -44,7 +44,7 @@ export function AccountUsage() {
     <h4>今日用量 · {usage.today.day}（北京时间）</h4><p>模型 {usage.today.modelCalls} / {state.services.preferences.dailyModelLimit ?? 40} 次 · 检索 {usage.today.searchCalls} / {state.services.preferences.dailySearchLimit ?? 20} 次</p>{(usage.today.modelReserved > 0 || usage.today.searchReserved > 0) && <p>请求预占：模型 {usage.today.modelReserved} 次、检索 {usage.today.searchReserved} 次；中断后保守计入当天额度。</p>}<h4>本应用 · 当前身份最近七天用量</h4>
     <p>模型请求 {usage.externalCalls} 次 · 检索请求 {usage.searchCalls} 次 · 已知 token 合计 {usage.knownTokens}</p>
     <p>用量未知的模型请求 {usage.unknownUsageCalls} 次。包含失败请求与格式修正重试，不把本地模板和搜索缓存命中计为外部调用。</p>
-    {usage.byProvider.map(row => <p key={row.provider}>{row.provider === 'deepseek' ? 'DeepSeek' : 'OpenAI'} 模型：{row.calls} 次，已知输入 {row.inputTokens} / 输出 {row.outputTokens} tokens；用量未知 {row.unknownCalls} 次。</p>)}
+    {usage.byProvider.map(row => <p key={row.provider}>{row.provider === 'deepseek' ? 'DeepSeek' : 'ChatGPT'} 模型：{row.calls} 次，已知输入 {row.inputTokens} / 输出 {row.outputTokens} tokens；用量未知 {row.unknownCalls} 次。</p>)}
     <p className="muted">这里只统计本应用当前身份的记录，不包含其他工具或身份；未知用量不按零消费计算，不能据此推算完整账单。调用元数据保留 30 天，账户余额不写入数据库。</p>
     <button className="button" onClick={() => void refresh()}>刷新本应用用量</button>
   </div>;

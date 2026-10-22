@@ -8,7 +8,7 @@ Next.js App Router、React、严格 TypeScript。首页和目录从版本化 JSO
 
 知识 JSON 是维护源；来源、主张、硬边、目标要求均有质量状态。无法核验时降级，不能以实现测试替代知识真实性。发布版本不可变；快照保存可读内容和版本。
 
-多模型：server/config 隔离 DeepSeek/OpenAI Key；llm 分别用 Chat Completions JSON 与 Responses JSON Schema。preferences 记录明确同意与 revision，advisor-context 只选必要字段，advisor 通过异步请求预占实现幂等。网络 I/O 在 SQLite 事务之外，写回前复核身份/设置/画像版本。检索只用公开专题，独立开关，缓存与来源按日期展示。任何模型文字不具数据库写能力。
+多模型：server/config 隔离 DeepSeek/ChatGPT Key；llm 分别用 Chat Completions JSON 与 Responses JSON Schema。preferences 记录明确同意与 revision，advisor-context 只选必要字段，advisor 通过异步请求预占实现幂等。网络 I/O 在 SQLite 事务之外，写回前复核身份/设置/画像版本。检索只用公开专题，独立开关，缓存与来源按日期展示。任何模型文字不具数据库写能力。
 
 数据契约：全部现有 SQL 表由 Drizzle 定义对应列、复合外键和级联规则；迁移仍以显式 SQL 为准，未自动生成或执行破坏性表变更。个人 JSON 恢复由 server/backup 白名单验证、引用检查、事件重放一致性、文件哈希和空白身份约束保护，事务中生成新标识并重映射内部关联。备份不恢复外部启用状态。knowledge-history 通过追加事件撤销最新确认，重放验证当前投影。
 

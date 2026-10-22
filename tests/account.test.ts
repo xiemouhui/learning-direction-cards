@@ -20,7 +20,7 @@ describe('账户余额与额度只读查询', () => {
     const result = await accountInfo('deepseek', { env, transport: async () => Response.json({ is_available: false, balance_infos: [{ currency: 'USD', total_balance: '0', granted_balance: '0', topped_up_balance: '0' }] }) });
     expect(result).toMatchObject({ status: 'success', available: false, balances: [{ total: '0', currency: 'USD' }] });
   });
-  it('演示、缺 Key、OpenAI 与自定义代理都不外发认证信息', async () => {
+  it('演示、缺 Key、ChatGPT 与自定义代理都不外发认证信息', async () => {
     const transport = vi.fn<typeof fetch>();
     expect((await accountInfo('deepseek', { env: {}, transport })).status).toBe('not_configured');
     expect((await accountInfo('deepseek', { env: { ...env, MOCK_AI: '1' }, transport })).status).toBe('disabled');

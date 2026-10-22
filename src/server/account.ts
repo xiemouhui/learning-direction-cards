@@ -11,7 +11,7 @@ const quotaSchema = z.object({ key: z.object({ usage: count, limit: count.nullab
 // Read only, explicit refresh only. Never persist account balances or vendor errors.
 export async function accountInfo(provider: AccountProvider, options: { env?: Environment; transport?: typeof fetch } = {}): Promise<AccountInfo> {
   const env = options.env ?? process.env;
-  if (provider === 'openai') return { status: 'unsupported', message: '当前普通模型 Key 未接入账户余额查询。官方账户用量接口需单独的管理密钥，请在 OpenAI 控制台核对余额与账单。' };
+  if (provider === 'openai') return { status: 'unsupported', message: '当前普通模型 Key 未接入账户余额查询。官方账户用量接口需单独的管理密钥，请在 ChatGPT 控制台核对余额与账单。' };
   const config = providerConfig('deepseek', env);
   const key = provider === 'deepseek' ? config.key : credentialValue('TAVILY_API_KEY', env);
   if (!key) return { status: 'not_configured', message: '尚未配置此服务的 Key。' };

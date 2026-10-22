@@ -39,6 +39,6 @@ AEAD 认证加密 学习路线 site:bilibili.com OR site:xiaohongshu.com OR site
 
 本轮没有追加真实付费模型／搜索调用。四平台策略的真实检索质量尚待新的授权验收。
 
-协议参考：[DeepSeek Search & Fetch](https://api-docs.deepseek.com/guides/search/)、[Tavily Search](https://docs.tavily.com/documentation/api-reference/endpoint/search)。共享顾问提示沿用 [OpenAI 官方文档关于不可信内容与结构化数据流的指导](https://developers.openai.com/api/docs/guides/agent-builder-safety)，不据此宣称提示能消除所有错误。
+协议参考：[DeepSeek Search & Fetch](https://api-docs.deepseek.com/guides/search/)、[Tavily Search](https://docs.tavily.com/documentation/api-reference/endpoint/search)。共享顾问提示沿用 [ChatGPT 官方文档关于不可信内容与结构化数据流的指导](https://developers.openai.com/api/docs/guides/agent-builder-safety)，不据此宣称提示能消除所有错误。
 
 更新：三次真实验收仅在 Bilibili 得到七条标题相关保留结果，其余三平台均为零，网页直达未验证，完整质量没有通过；见 [真实记录](search-acceptance-2026-10-20.md)。设置新增单平台限制，来源锚点、请求站点和缓存同步隔离，快速模式每次仍为一个搜索请求，不自动四次补齐；主动选择四平台对照模式时，固定执行四个独立查询。顾问提供自行访问平台的搜索入口，导航链接不作为引用证据；平台可能要求登录或对自动工具限制，入口可用性未完整验收。

@@ -19,7 +19,7 @@ try {
         $form.Controls.Add($label)
         $provider = New-Object System.Windows.Forms.ComboBox
         $provider.DropDownStyle = 'DropDownList'
-        $provider.Items.AddRange(@('DeepSeek','OpenAI','Tavily'))
+        $provider.Items.AddRange(@('DeepSeek','ChatGPT','Tavily'))
         $provider.SelectedIndex = 0
         $provider.Location = New-Object System.Drawing.Point(20,55)
         $provider.Width = 420

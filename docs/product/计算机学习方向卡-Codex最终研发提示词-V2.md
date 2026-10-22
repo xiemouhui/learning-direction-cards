@@ -299,7 +299,7 @@ agentRuns 只存脱敏元数据，默认滚动 30 天，用户删除时一并删
 
 ## 13. 工程与运行约束
 
-沿用 Next.js App Router、React、TypeScript strict、Tailwind、少量 shadcn/ui、SQLite/better-sqlite3/Drizzle、Zod、OpenAI 兼容 SDK、react-markdown/remark-gfm/rehype-sanitize、lucide-react、Vitest/RTL、Playwright、pnpm。第二阶段搜索可用 Tavily REST provider，配置可替换。
+沿用 Next.js App Router、React、TypeScript strict、Tailwind、少量 shadcn/ui、SQLite/better-sqlite3/Drizzle、Zod、ChatGPT 兼容 SDK、react-markdown/remark-gfm/rehype-sanitize、lucide-react、Vitest/RTL、Playwright、pnpm。第二阶段搜索可用 Tavily REST provider，配置可替换。
 
 实施前查询官方文档，核验受支持且互相兼容的框架/Node/pnpm/原生驱动/ESLint 命令/模型协议，记录版本、日期和来源并提交锁文件；本文件不声称原 Next15/Node20/示例模型名仍是适合的当前版本。普通兼容选型可自主处理，不引入无理由架构替换。
 

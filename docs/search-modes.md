@@ -31,4 +31,4 @@
 
 本轮仅执行离线测试和本地 HTTP fixture，平台帖子均为明确虚构数据，未追加真实模型或搜索请求。四次独立实时查询在真实账户下的召回效果尚未验收，原三次综合搜索结果不能替代新模式质量验收。
 
-协议能力沿用 [DeepSeek Search](https://api-docs.deepseek.com/zh-cn/guides/search/) 和 [Tavily Search](https://docs.tavily.com/documentation/api-reference/endpoint/search)。共享总结提示按 [OpenAI 不可信上下文指导](https://developers.openai.com/api/docs/guides/agent-builder-safety) 核对，保留应用自身校验，不声称提示能消除所有事实错误。
+协议能力沿用 [DeepSeek Search](https://api-docs.deepseek.com/zh-cn/guides/search/) 和 [Tavily Search](https://docs.tavily.com/documentation/api-reference/endpoint/search)。共享总结提示按 [ChatGPT 不可信上下文指导](https://developers.openai.com/api/docs/guides/agent-builder-safety) 核对，保留应用自身校验，不声称提示能消除所有事实错误。

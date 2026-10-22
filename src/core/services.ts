@@ -4,7 +4,7 @@ export const providerSchema = z.enum(['deepseek', 'openai']);
 export type Provider = z.infer<typeof providerSchema>;
 export type AccountProvider = Provider | 'tavily';
 export type AccountInfo = { status: 'success'; checkedAt: string; available?: boolean; balances?: { currency: string; total: string; granted: string; toppedUp: string }[]; quota?: { keyUsed: number; keyLimit: number | null; planUsed: number; planLimit: number; paygoUsed: number; paygoLimit: number | null } } | { status: 'unsupported' | 'not_configured' | 'disabled' | 'failed'; message: string };
-export const providerLabels = { deepseek: 'DeepSeek', openai: 'OpenAI' };
+export const providerLabels = { deepseek: 'DeepSeek', openai: 'ChatGPT' };
 export const modelSchema = z.string().trim().regex(/^[A-Za-z0-9][A-Za-z0-9_.:/-]{0,99}$/, '请输入有效模型 ID。');
 export const servicePreferencesSchema = z.object({
   provider: providerSchema,
